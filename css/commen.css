@@ -1,0 +1,10 @@
+@charset "utf-8";
+
+/* 페이지에 상관없이 사용되는(헤더, 푸터, 버튼등) 스타일 저장 */
+
+body{
+    font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+    font-size: 14px;
+    line-height: 1.5;
+    color: #121212;
+}
