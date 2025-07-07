@@ -1,0 +1,331 @@
+@charset "utf-8";
+
+#big-Title{
+    width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.top-Side{
+    width: 1400px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: space-between;
+}
+
+.top-Side .image{
+    width: 704px;
+    height: 863px;
+    background-size: 100% auto;
+    background-image: url("/project_qwer/img/topside\ image.avif");
+}
+
+.right-Side{
+    border-left: 1px solid rgb(211, 211, 211);
+    padding-left: 30px;
+}
+
+.right-Side .text-Title{
+    padding-top: 60px;
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+.right-Side .price{
+    font-size: 30px;
+    font-weight: bolder;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+}
+
+.right-Side .brand-name{
+    font-size: 18px;
+}
+
+.right-Side .brand-hagul{
+    font-size: 18px;
+    color: gray;
+    margin-bottom: 15px;
+}
+
+.right-Side .Rating{
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.right-Side .Rating .icon{
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 15px;
+    height: 15px;
+    background-size: 15px;
+    background-image: url("/project_qwer/img/star.png");
+}
+
+.right-Side .Rating .number{
+    margin-left: 2px;
+}
+
+.right-Side .Rating .review{
+    text-decoration: underline;
+    margin-left: 10px;
+}
+
+.right-Side .size-Bar{
+    width: 600px;
+    height: 70px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 15px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    line-height: 3.2;
+    padding-left: 20px;
+    font-weight: bolder;
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+}
+
+.right-Side .size-Bar .size-icon{
+    margin-top: 22px;
+    margin-right: 30px;
+    width: 27px;
+    height: 27px;
+    color:  white;
+    border: 0.5px solid rgb(124, 124, 124);
+    border-radius: 80px;
+    background-image: url(/project_qwer/img/triangle.png);
+    background-size: 17px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.right-Side .color{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.right-Side .color-text{
+    font-size: 20px;
+    font-weight: bolder;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.right-Side .color .red{
+    width: 75px;
+    height: 75px;
+    border-radius: 10px;
+    background-color: red;
+}
+
+.right-Side .color .blue{
+    width: 75px;
+    height: 75px;
+    border-radius: 10px;
+    background-color: blue;
+}
+
+.right-Side .color .Black{
+    width: 75px;
+    height: 75px;
+    border-radius: 10px;
+    background-color: black;
+}
+
+.right-Side .color .navi{
+    width: 75px;
+    height: 75px;
+    border-radius: 10px;
+    background-color: navy;
+}
+
+.right-Side .color .white{
+    width: 75px;
+    height: 75px;
+    border-radius: 10px;
+    background-color: rgb(12, 255, 113);
+}
+
+.right-Side .color .purple{
+    width: 75px;
+    height: 75px;
+    border-radius: 10px;
+    background-color: purple;
+}
+
+.color .red ::after{
+    content: "";
+    display: block;
+    width: 1px;
+    height: 30px;
+    background-color: #000000;
+    margin-left: 91px;
+    margin-bottom: 2px;
+}
+
+.color .blue ::after{
+    content: "";
+    display: block;
+    width: 1px;
+    height: 30px;
+    background-color: #000000;
+    margin-left: 91px;
+    margin-bottom: 2px;
+}
+
+.color .Black ::after{
+    content: "";
+    display: block;
+    width: 1px;
+    height: 30px;
+    background-color: #000000;
+    margin-left: 91px;
+    margin-bottom: 2px;
+}
+
+.color .navi ::after{
+    content: "";
+    display: block;
+    width: 1px;
+    height: 30px;
+    background-color: #000000;
+    margin-left: 91px;
+    margin-bottom: 2px;
+}
+
+.color .white ::after{
+    content: "";
+    display: block;
+    width: 1px;
+    height: 30px;
+    background-color: #000000;
+    margin-left: 91px;
+    margin-bottom: 2px;
+}
+
+
+.Buy-Cart{
+    display: flex;
+    gap: 50px;  
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.Buy-Cart .Buy{
+    width: 200px;
+    height: 70px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+    font-size: 20px;
+    font-weight: bolder;
+    border: 1px solid black;
+}
+
+.Buy-Cart .Cart{
+    width: 200px;
+    height: 70px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+    font-size: 20px;
+    font-weight: bolder;
+    border: 1px solid black;
+}
+
+.cloth{
+    border-top: 0.5px solid rgb(138, 138, 138);
+    padding-top: 20px;
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.cloth p{
+    width: 150px;
+    height: 180px;
+    background-color: #000000;
+}
+
+.cloth .cloth1{
+    background-image: url(/project_qwer/img/cloth.jpg);
+}
+
+.cloth .cloth2{
+    background-image: url(/project_qwer/img/cloth2.jpg);
+}
+
+.cloth .cloth3{
+    background-size: cover;
+    background-image: url(/project_qwer/img/cloth3.png);
+}
+
+.cloth .cloth4{
+    background-size: cover;
+    background-image: url(/project_qwer/img/colth4.jpg);
+}
+
+.scroll{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.scroll p{
+    width: 10px;
+    height: 10px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-image: url(/project_qwer/img/circle\ black.jpg);
+    margin-top: 10px;
+    opacity: 0.5;
+}
+
+.scroll-icon1{
+    width: 30px;
+    height: 30px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-image: url("/project_qwer/img/left\ icon.jpg");
+}
+
+.scroll-icon2{
+    width: 30px;
+    height: 30px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-image: url("/project_qwer/img/right\ icon.jpg");
+}
+
+
+.bottom-Side{
+    width: 1400px;
+    background-color: rgb(255, 255, 255);
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.bottom-Side .bottom-image{
+    width: 729px;
+    height: 800px;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-image: url("/project_qwer/img/left\ image.jpg");
+}
+
+.bottom-Sidetext .impor{
+    margin-top: 60px;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.bottom-Sidetext li{
+    list-style-type: disc;
+    font-size: 17px;
+    color: grey;
+    margin-bottom: 32px;
+}
