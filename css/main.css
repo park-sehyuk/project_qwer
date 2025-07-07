@@ -1,0 +1,84 @@
+@charset "UTF-8";
+
+#mainslider{
+    position: relative;
+    width: 1900px;
+    margin: 0 auto;
+    margin-bottom: 100px;
+    background-color: antiquewhite;
+}
+#mainslider #slider{
+    background-color: bisque;
+    width: 100%;
+    height: 880px;
+}
+#slliderController{
+    position: relative;
+}
+/* 메인 슬라이드 페이징 */
+#sliderController #sliderPager{
+    position: absolute;
+    bottom: 80px;
+    left: 50%;
+    right: 50%;
+    z-index: 999;
+}
+#sliderController #sliderPager ul{
+    display: flex;
+    justify-content: center;
+}
+#sliderController #sliderPager li{
+    width: 9px;
+    height: 9px;
+    margin: 0 20px;
+}
+#sliderController #sliderPager li button{
+    width: 18px;
+    height: 18px;
+    background-color: #fff;
+    border-radius: 50%;
+    text-indent: -99999px;
+}
+#sliderController #sliderPager .active button{
+    background-color: #ddd;
+}
+
+/* 메인 슬라이더 이전/다음 버튼 */
+#sliderController .prew{
+    position: absolute;
+    top: 50%;
+    left: 60px;
+    width: 19px;
+    height: 37px;
+    background-color: #fff;
+    text-indent: -99999px;
+}
+#sliderController .next{
+    position: absolute;
+    top: 50%;
+    right: 60px;
+    width: 19px;
+    height: 37px;
+    background-color: #fff;
+    text-indent: -99999px;
+}
+
+/* best 아이템 */
+#bestList{
+    width: 1594px;
+    margin: 0 auto;
+    background-color: burlywood;
+}
+#bestList h1{
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 50px;
+}
+#bestItem ul{
+    display: flex;
+    justify-content: space-between;
+}
+#bestItem li{
+    width: 368px;
+    
+}
