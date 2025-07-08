@@ -129,3 +129,84 @@ footer .fMenu ul li:not(:last-child)::after {
   justify-content: space-between;
   padding: 24px 0px 40px;
 }
+
+#searchResult {
+  height: 324px;
+  display: none;
+  z-index: 500px;
+}
+#searchResult #srTop {
+  position: relative;
+  display: flex;
+  padding: 20px 30px;
+  justify-content: space-between;
+}
+
+#searchResult #srTop div {
+  display: flex;
+  margin: 0 auto;
+}
+#searchResult #srTop div #search {
+  background-color: #f5f5f5;
+  width: 825px;
+  height: 36px;
+  border: none;
+  border-radius: 20px;
+}
+#srTop p button {
+  position: absolute;
+  left: 289px;
+  display: block;
+  width: 36px;
+  height: 36px;
+  background-repeat: no-repeat;
+  border: 2px solid #f5f5f5;
+  border-radius: 50%;
+  background-color: #f5f5f5;
+  text-indent: -9999px;
+  background-image: url(../img/reading.png);
+  background-size: 24px 24px;
+  background-position: center;
+}
+#srTop div #clear {
+  position: absolute;
+  right: 293px;
+  width: 36px;
+  height: 36px;
+  background-repeat: no-repeat;
+  border: 2px solid #f5f5f5;
+  border-radius: 50%;
+  background-color: #f5f5f5;
+  text-indent: -9999px;
+  background-image: url(../img/x.png);
+  background-size: 24px 24px;
+  background-position: center;
+  display: none;
+}
+#searchResult ul {
+  display: flex;
+  gap: 30px;
+}
+#searchResult ul li button {
+  background-color: #f5f5f5;
+  border-radius: 20px;
+  padding: 10px;
+  font-weight: bold;
+}
+#searchResult #srMid {
+  width: 855px;
+  height: 164px;
+  padding: 36px 0px 60px;
+  margin: 0 auto;
+}
+#srMid p {
+  padding: 12px 0px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #707072;
+  font-weight: bold;
+}
+
+input[type='text'] {
+  padding-left: 50px;
+}
