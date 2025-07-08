@@ -3,8 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>QWER</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/commen.css">
+    <link rel="stylesheet" href="../css/userLog/login.css">
 </head>
 <body>
-    
+    <div id="wrapper">
+        <h1>LOGIN</h1>
+        <div id="loginOption">
+            <div id="loginSelect">
+                <button id="loginSel" class="active">회원</button>
+                <button id="nonMemberSel">비회원</button>
+            </div>
+            <div id="loginForm">
+                <h3>회원 로그인</h3>
+                    <div class="inputBox">
+                        <input type="text" id="id" name="id" placeholder="아이디">
+                        <input type="password" id="password" name="password" placeholder="패스워드" >
+                    </div>
+                    <div id="idSaved">
+                        <input type="checkbox" id="idSave">
+                        <p>아이디 저장</p>
+                    </div>
+                    <div id="loginBtn">
+                        <button id="submit">로그인</button>
+                    </div>
+                    <div id="option">
+                        <p><a href="#">아이디 찾기</a></p>
+                        <p><a href="#">비밀번호 찾기</a></p>
+                        <p><a href="#">회원가입</a></p>
+                    </div>
+            </div>
+            <div id="nonMember">
+                <h3>비회원 주문조회</h3>
+                    <div class="inputBox">
+                        <input type="text" id="reseNumr" name="reserNum" placeholder="예약번호">
+                        <input type="text" id="userName" name="userName" placeholder="고객명" >
+                    </div>
+                    <div id="nonBtn">
+                        <button id="submit">주문조회</button>
+                    </div>
+        </div>
+    </div>
 </body>
