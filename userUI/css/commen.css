@@ -155,10 +155,11 @@ footer .fMenu ul li:not(:last-child)::after {
 }
 #srTop p button {
   position: absolute;
-  left: 289px;
+  top: 23px;
+  left: 296px;
   display: block;
-  width: 36px;
-  height: 36px;
+  width: 31px;
+  height: 31px;
   background-repeat: no-repeat;
   border: 2px solid #f5f5f5;
   border-radius: 50%;
@@ -206,7 +207,9 @@ footer .fMenu ul li:not(:last-child)::after {
   color: #707072;
   font-weight: bold;
 }
-
-input[type='text'] {
-  padding-left: 50px;
+.textInput {
+  padding-left: 5px;
+}
+#searchResult #search {
+  padding-left: 45px;
 }
