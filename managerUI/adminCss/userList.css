@@ -1,0 +1,254 @@
+@charset "utf-8";
+
+#scale{
+    width: 1920px;
+    height: 1080px;
+    margin: 0 auto;
+    display: flex;
+    border: 1px solid black;
+}
+
+#scale .left-side{
+    width: 500px;
+    height: 1080px;
+    background-color: violet;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.userimg {
+    width: 120px; 
+    height: 120px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 110px;
+    left: 60px;
+}
+
+.userimg img {
+    max-width: 100%; 
+    max-height: 100%; 
+    object-fit: contain;
+}
+
+.left-side .userList{
+    font-size: 40px;
+    color: yellow;
+    text-align: center;
+    line-height: 360px;
+    width: 500px;
+    height: 360px;
+    background-color: rgb(0, 0, 0);
+    border-bottom: 1px solid white;
+}
+
+.left-side .postList{
+    font-size: 40px;
+    color: white;
+    text-align: center;
+    line-height: 360px;
+    width: 500px;
+    height: 360px;
+    background-color: rgb(99, 99, 99);
+    border-bottom: 1px solid white;
+}
+
+.left-side .categoryList {
+    font-size: 40px;
+    color: white;
+    width: 500px;
+    height: 360px;
+    background-color: rgb(0, 0, 0);
+    border-bottom: 1px solid white;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* 이 부분이 이미지와 텍스트 블록 자체를 중앙 정렬합니다. */
+    gap: 15px;
+    text-align: center; /* <<-- 이 부분이 텍스트 내용을 중앙 정렬합니다. */
+}
+.top-right{
+    width: 1420px;
+    height: 1080px;
+}
+
+.right-side{
+    width: 1420px;
+    display: flex;
+}
+
+.right-Title .right-Title1{
+    padding-left: 40px;
+    font-size: 40px;
+    font-weight: bolder;
+}
+
+.right-side .right-Title2{
+    padding-left: 40px;
+    font-size: 20px;
+    opacity: 0.5;
+}
+
+.payment{
+    display: flex;
+    gap: 30px;
+    align-self: center;
+    margin-top: 60px;
+    margin-left: 160px;
+}
+
+.payment .payment-text{
+    font-size: 18px;
+    font-weight: bolder;
+    line-height: 0.3;
+}
+
+.payment-cal{
+    width: 250px;
+    height: 40px;
+    gap: 15px;
+    display: flex;
+    background-color: white;
+    border-radius: 10px;
+    padding-left: 20px;
+    padding-right: 10px;
+    align-items: center;
+    border: 1px solid black;
+}
+
+.payment-cal .right{
+    background-image: url(../img/right.png);
+    width: 15px;
+    height: 15px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    opacity: 0.5;
+}
+
+.payment-cal .date{
+    background-image: url(../img/date.png);
+    width: 20px;
+    height: 20px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.button-tap .starline{
+    font-size: 16px;
+    font-weight: bolder;
+    color: white;
+    width: 80px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: rgb(48, 48, 48);
+}
+
+.button-tap{
+    margin-left: 280px;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.button-tap .download{
+    font-size: 16px;
+    font-weight: bolder;
+    color: white;
+    width: 150px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: rgb(48, 48, 48);
+}
+
+.button-tap .search{
+    font-size: 16px;
+    font-weight: bolder;
+    color: white;
+    width: 65px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: rgb(48, 48, 48);
+}
+
+.top-right {
+    width: 1420px;
+    height: 1080px;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.right-side {
+    width: 100%; 
+    display: flex; 
+    flex-shrink: 0; 
+    padding-bottom: 10px; 
+    box-sizing: border-box; 
+}
+
+.table-area {
+    width: 100%;
+    flex-grow: 1; 
+    overflow-y: auto; 
+}
+
+.list-text {
+    display: flex;
+    justify-content: center;
+    gap: 90px;
+    font-size: 20px;
+    font-weight: bolder;
+    border-bottom: 1px solid black;
+    padding-bottom: 10px; 
+    background-color: white; 
+    position: sticky; 
+    top: 0; 
+    z-index: 1; 
+}
+
+.user-data-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 16px;
+    table-layout: fixed; 
+}
+
+.user-data-table th,
+.user-data-table td {
+    border: 1px solid #ddd;
+    padding: 12px 10px;
+    text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.user-data-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+    text-align: center;
+}
+
+.user-data-table th:nth-child(1), .user-data-table td:nth-child(1) { width: 8%; }
+.user-data-table th:nth-child(2), .user-data-table td:nth-child(2) { width: 8%; }
+.user-data-table th:nth-child(3), .user-data-table td:nth-child(3) { width: 20%; }
+.user-data-table th:nth-child(4), .user-data-table td:nth-child(4) { width: 12%; }
+.user-data-table th:nth-child(5), .user-data-table td:nth-child(5) { width: 8%; }
+.user-data-table th:nth-child(6), .user-data-table td:nth-child(6) { width: 10%; }
+.user-data-table th:nth-child(7), .user-data-table td:nth-child(7) { width: 14%; }
+.user-data-table th:nth-child(8), .user-data-table td:nth-child(8) { width: 10%; }
+.user-data-table th:nth-child(9), .user-data-table td:nth-child(9) { width: 10%; }
+
+.user-data-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.user-data-table tbody tr:hover {
+    background-color: #e0e0e0;
+}
