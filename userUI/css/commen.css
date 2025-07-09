@@ -207,6 +207,3 @@ footer .fMenu ul li:not(:last-child)::after {
   font-weight: bold;
 }
 
-input[type='text'] {
-  padding-left: 50px;
-}
