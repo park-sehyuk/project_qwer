@@ -51,7 +51,6 @@
     position: absolute;
     top: 50%;
     left: 60px;
-    background-color: #ddd;
 }
 #sliderController .prew button{
     width: 19px;
@@ -63,7 +62,6 @@
     position: absolute;
     top: 50%;
     right: 60px;
-    background-color: #ddd;
 }
 #sliderController .next button{
     width: 19px;
@@ -86,14 +84,15 @@
 }
 #bestItem ul{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 20px;
 }
 #bestItem li{
-    width: 503px;
+    width: 400px;
 }
 #bestItem li img{
     width: 100%;
-    height: 694px;
+    height: 650px;
     margin-bottom: 7px;
 }
 #bestItem li .name{
@@ -125,14 +124,15 @@
 }
 #suggItem ul{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 20px;
 }
 #suggItem li{
-    width: 503px;
+    width: 400px;
 }
 #suggItem li img{
     width: 100%;
-    height: 694px;
+    height: 650px;
     margin-bottom: 7px;
 }
 #suggItem li .name{
@@ -164,14 +164,15 @@
 }
 #productItem ul{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 20px;
 }
 #productItem li{
-    width: 503px;
+    width: 400px;
 }
 #productItem li img{
     width: 100%;
-    height: 694px;
+    height: 650px;
     margin-bottom: 7px;
 }
 #productItem li .name{
