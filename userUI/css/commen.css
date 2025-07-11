@@ -12,37 +12,34 @@ a {
   color: black;
 }
 #wrapper {
-  width: 1440px;
-  height: auto;
-}
-header {
   position: relative;
-  width: 100%;
-  height: 100%;
-  color: black;
+  min-width: 1480px;
+}
+#header {
+  position: relative;
+  border-bottom: 1px solid #ccc;
 }
 
 #header-top {
   display: flex;
   justify-content: center;
   padding: 20px 0px;
+  font-size: 20px;
 }
 #header-mid {
   display: flex;
   align-items: center;
   justify-content: center;
-  border-top: 1px solid #121212;
-  border-bottom: 1px solid #121212;
+  padding-bottom: 20px;
 }
 header #category {
   display: flex;
-  font-size: 24px;
-  font-weight: 400px;
-  gap: 40px;
+  font-size: 20px;
+  font-weight: 500;
+  gap: 60px;
 }
-header #category > li {
+header #category li a{
   color: #222;
-  padding: 24px 0px;
 }
 header #icons {
   display: flex;
@@ -89,19 +86,17 @@ header .midRight button {
 }
 
 footer {
-  background-color: #f4f4f4;
-  height: auto;
-  padding: 0 25px;
+  background-color: #fafafa;
 }
 footer span {
   display: block;
-  color: #222;
+  color: #444;
 }
 footer strong {
   font-weight: bold;
 }
 footer .fMenu {
-  border-bottom: 1px solid #222;
+  border-bottom: 1px solid #ddd;
 }
 footer .fMenu ul {
   display: flex;
@@ -127,7 +122,8 @@ footer .fMenu ul li:not(:last-child)::after {
 .fInfo {
   display: flex;
   justify-content: space-between;
-  padding: 24px 0px 40px;
+  padding: 40px 40px 80px 40px;
+  line-height: 1.8;
 }
 
 #searchResult {

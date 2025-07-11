@@ -1,15 +1,9 @@
 @charset "utf-8";
 
-.main-content {
-  width: 1900px;
-  margin: auto 200px;
-  padding: 0 15px;
-}
 
 .main-content #banner {
   width: 1400px;
-  height: 300px;
-  margin: 0 auto;
+  margin: 0 auto 80px auto;
 }
 .main-content #banner #searchResultPage {
   text-align: center;
@@ -20,20 +14,30 @@
 .toolbar {
   display: flex;
   justify-content: space-between;
-  width: 1400px;
+  align-items: center;
+  width: 1440px;
   margin: 0 auto;
-  margin-bottom: 25px;
+  margin-bottom: 40px;
+  font-size: 16px;
 }
+.toolbar .sort-container select{
+  height: 32px;
+  padding: 0 8px;
+  border: 1px solid #bbb;
+}
+
 .product-grid {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
-  width: 1400px;
+  gap: 48px 20px;
+  width: 1440px;
   margin: 0 auto;
+  padding-bottom: 40px;
 }
 .product-image {
-  width: 335px;
-  height: 462px;
+  width: 345px;
+  height: 345px;
+  margin-bottom: 20px;
   background-color: aqua;
 }
 
@@ -56,14 +60,15 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 30px 0;
+  margin: 30px 0 100px 0;
 }
 
 .pagination ul {
   display: flex;
 }
 .pagination a {
-  margin: 0 7px;
-  width: 10px;
+  margin: 0 8px;
   text-align: center;
+  color: #555;
+  font-size: 14px;
 }
