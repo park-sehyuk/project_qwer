@@ -206,4 +206,9 @@ footer .fMenu ul li:not(:last-child)::after {
   color: #707072;
   font-weight: bold;
 }
-
+.textInput {
+  padding-left: 5px;
+}
+#searchResult #search {
+  padding-left: 45px;
+}
