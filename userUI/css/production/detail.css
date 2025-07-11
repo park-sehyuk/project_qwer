@@ -1,87 +1,92 @@
 @charset "utf-8";
 
-#big-Title{
+#big-Title {
     width: 1400px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
 }
 
-.top-Side{
+.top-Side {
     width: 1400px;
     background-color: rgb(255, 255, 255);
     display: flex;
     justify-content: space-between;
 }
 
-.top-Side .image{
-    width: 704px;
-    height: 863px;
+.top-Side .left-image {
+    margin-right: 30px;
+    width: 950px;
+    height: 900px;
     background-size: 100% auto;
-    background-image: url("/project_qwer/img/topside\ image.avif");
+    background-repeat: no-repeat;
+    background-image: url(/userUI/img/옷\ 이미지.jpg);
 }
 
-.right-Side{
+.right-Side {
     border-left: 1px solid rgb(211, 211, 211);
     padding-left: 30px;
+    position: relative;
+    border-bottom: 1px solid rgb(211, 211, 211);
+    border-right: 1px solid rgb(211, 211, 211);
 }
 
-.right-Side .text-Title{
+.right-Side .text-Title {
     padding-top: 60px;
     margin-top: 10px;
     font-size: 20px;
 }
 
-.right-Side .price{
+.right-Side .price {
     font-size: 30px;
     font-weight: bolder;
     letter-spacing: 2px;
     margin-bottom: 30px;
 }
 
-.right-Side .brand-name{
+.right-Side .brand-name {
     font-size: 18px;
 }
 
-.right-Side .brand-hagul{
+.right-Side .brand-hagul {
     font-size: 18px;
     color: gray;
     margin-bottom: 15px;
 }
 
-.right-Side .Rating{
+.right-Side .Rating {
     display: flex;
     align-items: center;
     margin-bottom: 5px;
 }
 
-.right-Side .Rating .icon{
+.right-Side .Rating .icon {
     display: inline-block;
     background-repeat: no-repeat;
     background-position: center;
     width: 15px;
     height: 15px;
     background-size: 15px;
-    background-image: url("/project_qwer/img/star.png");
+    background-image: url("/userUI/img/star.png");
 }
 
-.right-Side .Rating .number{
+.right-Side .Rating .number {
     margin-left: 2px;
 }
 
-.right-Side .Rating .review{
+.right-Side .Rating .review {
     text-decoration: underline;
     margin-left: 10px;
 }
 
-.right-Side .size-Bar{
-    width: 600px;
-    height: 70px;
+.right-Side .size-Bar {
+    width: 400px;
+    height: 50px;
     background-color: rgb(255, 255, 255);
     border-radius: 15px;
     margin-bottom: 20px;
-    font-size: 20px;
-    line-height: 3.2;
+    font-size: 18px;
+    line-height: 2.6;
     padding-left: 20px;
     font-weight: bolder;
     border: 1px solid black;
@@ -89,243 +94,272 @@
     justify-content: space-between;
 }
 
-.right-Side .size-Bar .size-icon{
-    margin-top: 22px;
-    margin-right: 30px;
+.right-Side .size-Bar .size-icon {
+    margin-top: 12px;
+    margin-right: 25px;
     width: 27px;
     height: 27px;
-    color:  white;
+    color: white;
     border: 0.5px solid rgb(124, 124, 124);
     border-radius: 80px;
-    background-image: url(/project_qwer/img/triangle.png);
+    background-image: url(/userUI/img/triangle.png);
     background-size: 17px;
     background-repeat: no-repeat;
     background-position: center;
 }
 
-.right-Side .color{
+.right-Side .color {
     display: flex;
-    justify-content: space-between;
+    gap: 50px;
     margin-bottom: 30px;
 }
 
-.right-Side .color-text{
+.right-Side .color-text {
     font-size: 20px;
     font-weight: bolder;
-    text-align: center;
-    margin-bottom: 10px;
+    margin-left: 121px;
+    margin-bottom: 20px;
 }
 
-.right-Side .color .red{
-    width: 75px;
-    height: 75px;
+.right-Side .color .red {
+    width: 60px;
+    height: 60px;
     border-radius: 10px;
     background-color: red;
 }
 
-.right-Side .color .blue{
-    width: 75px;
-    height: 75px;
+.right-Side .color .blue {
+    width: 60px;
+    height: 60px;
     border-radius: 10px;
     background-color: blue;
 }
 
-.right-Side .color .Black{
-    width: 75px;
-    height: 75px;
+.right-Side .color .Black {
+    width: 60px;
+    height: 60px;
     border-radius: 10px;
-    background-color: black;
+    background-color: yellow;
 }
 
-.right-Side .color .navi{
-    width: 75px;
-    height: 75px;
-    border-radius: 10px;
-    background-color: navy;
-}
-
-.right-Side .color .white{
-    width: 75px;
-    height: 75px;
-    border-radius: 10px;
-    background-color: rgb(12, 255, 113);
-}
-
-.right-Side .color .purple{
-    width: 75px;
-    height: 75px;
-    border-radius: 10px;
-    background-color: purple;
-}
-
-.color .red ::after{
+.color .red::after {
     content: "";
     display: block;
     width: 1px;
     height: 30px;
     background-color: #000000;
-    margin-left: 91px;
+    margin-left: 84px;
     margin-bottom: 2px;
 }
 
-.color .blue ::after{
+.color .blue::after {
     content: "";
     display: block;
     width: 1px;
     height: 30px;
     background-color: #000000;
-    margin-left: 91px;
+    margin-left: 84px;
     margin-bottom: 2px;
 }
 
-.color .Black ::after{
-    content: "";
-    display: block;
-    width: 1px;
-    height: 30px;
-    background-color: #000000;
-    margin-left: 91px;
-    margin-bottom: 2px;
-}
-
-.color .navi ::after{
-    content: "";
-    display: block;
-    width: 1px;
-    height: 30px;
-    background-color: #000000;
-    margin-left: 91px;
-    margin-bottom: 2px;
-}
-
-.color .white ::after{
-    content: "";
-    display: block;
-    width: 1px;
-    height: 30px;
-    background-color: #000000;
-    margin-left: 91px;
-    margin-bottom: 2px;
-}
-
-
-.Buy-Cart{
+.Buy-Cart {
     display: flex;
-    gap: 50px;  
-    justify-content: center;
+    gap: 20px;
     margin-bottom: 40px;
 }
 
-.Buy-Cart .Buy{
-    width: 200px;
-    height: 70px;
+.Buy-Cart .Buy {
+    width: 120px;
+    height: 50px;
     background-color: rgb(255, 255, 255);
     border-radius: 20px;
-    font-size: 20px;
+    font-size: 16px;
     font-weight: bolder;
     border: 1px solid black;
 }
 
-.Buy-Cart .Cart{
-    width: 200px;
-    height: 70px;
+.Buy-Cart .Cart {
+    width: 90px;
+    height: 50px;
     background-color: rgb(255, 255, 255);
     border-radius: 20px;
-    font-size: 20px;
+    font-size: 16px;
     font-weight: bolder;
     border: 1px solid black;
 }
 
-.cloth{
-    border-top: 0.5px solid rgb(138, 138, 138);
-    padding-top: 20px;
-    display: flex;
-    gap: 10px;
+.cloth-container {
+    width: 600px;
+    overflow: hidden;
     margin-bottom: 10px;
 }
 
-.cloth p{
+.cloth {
+    display: flex;
+    gap: 10px;
+    width: 640px;
+    transition: transform 0.5s ease-in-out;
+}
+
+.cloth img{
     width: 150px;
     height: 180px;
-    background-color: #000000;
+    flex-shrink: 0;
+    object-fit: cover;
+    cursor: pointer;
+    border: 2px solid transparent;
 }
 
-.cloth .cloth1{
-    background-image: url(/project_qwer/img/cloth.jpg);
+.cloth img.selected-thumbnail {
+    border: 2px solid #007bff;
 }
 
-.cloth .cloth2{
-    background-image: url(/project_qwer/img/cloth2.jpg);
+.cloth p {
+    width: 150px;
+    height: 180px;
+    flex-shrink: 0;
 }
 
-.cloth .cloth3{
-    background-size: cover;
-    background-image: url(/project_qwer/img/cloth3.png);
-}
-
-.cloth .cloth4{
-    background-size: cover;
-    background-image: url(/project_qwer/img/colth4.jpg);
-}
-
-.scroll{
+.scroll {
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 15px;
 }
 
-.scroll p{
+.scroll p.dot {
     width: 10px;
     height: 10px;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    background-image: url(/project_qwer/img/circle\ black.jpg);
-    margin-top: 10px;
-    opacity: 0.5;
+    background-color: #ccc;
+    border-radius: 50%;
+    margin-top: 0;
+    opacity: 1;
+    cursor: pointer;
 }
 
-.scroll-icon1{
+.scroll p.dot.active {
+    background-color: #000000;
+}
+
+.scroll-icon1 {
     width: 30px;
     height: 30px;
     background-repeat: no-repeat;
     background-size: 100%;
-    background-image: url("/project_qwer/img/left\ icon.jpg");
+    background-image: url("/userUI/img/left\ icon.jpg");
 }
 
-.scroll-icon2{
+.scroll-icon2 {
     width: 30px;
     height: 30px;
     background-repeat: no-repeat;
     background-size: 100%;
-    background-image: url("/project_qwer/img/right\ icon.jpg");
+    background-image: url("/userUI/img/right\ icon.jpg");
 }
 
-
-.bottom-Side{
+.bottom-Side {
     width: 1400px;
     background-color: rgb(255, 255, 255);
     margin-top: 50px;
     display: flex;
     justify-content: space-between;
+    margin: 0 auto;
+    padding-top: 150px;
+    padding-left: 60px;
 }
 
-.bottom-Side .bottom-image{
+.bottom-image-container {
     width: 729px;
     height: 800px;
-    background-repeat: no-repeat;
-    background-size: 100% auto;
-    background-image: url("/project_qwer/img/left\ image.jpg");
+    overflow-y: hidden;
+    overflow-x: hidden;
+    border: 1px solid #eee;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
 }
 
-.bottom-Sidetext .impor{
+.bottom-image-container:hover {
+    overflow-y: scroll;
+    scrollbar-width: auto;
+    -ms-overflow-style: scrollbar;
+}
+
+.bottom-image-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.bottom-image-container::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 4px;
+}
+
+.bottom-image-container::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+    border-radius: 4px;
+}
+
+.bottom-image-container::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+}
+
+.bottom-image-container img {
+    width: 100%;
+    height: 800px;
+    object-fit: cover;
+    display: block;
+}
+
+.bottom-Sidetext .impor {
     margin-top: 60px;
     font-size: 20px;
     margin-bottom: 20px;
 }
 
-.bottom-Sidetext li{
+.bottom-Sidetext li {
     list-style-type: disc;
     font-size: 17px;
     color: grey;
     margin-bottom: 32px;
+}
+
+.size-options {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #fff;
+    padding: 10px 0;
+    margin-top: 10px;
+    width: 400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    z-index: 10;
+    top: 315px;
+    left: 30px;
+    display: none;
+}
+
+.size-options ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.size-options ul li button {
+    width: 100%;
+    padding: 10px 20px;
+    text-align: left;
+    border: none;
+    background-color: transparent;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.size-options ul li button:hover {
+    background-color: #f0f0f0;
+}
+
+.size-options ul li button.selected {
+    background-color: #e0e0e0;
+    font-weight: bold;
+    color: #007bff;
 }
