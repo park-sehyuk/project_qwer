@@ -210,4 +210,3 @@ let sliderIndex = 0;
 // 적용
 enableDragScroll(bestItem);
 
-    
