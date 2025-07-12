@@ -72,20 +72,20 @@
 }
 
 /* best 아이템 */
-#bestList{
-    width: 1594px;
-    margin: 0 auto;
-    margin-bottom: 160px;
-}
 #bestList h1{
     text-align: center;
     font-size: 36px;
     margin-bottom: 42px;
 }
+#bestList #bestItem{
+    overflow: hidden;
+    margin-bottom: 160px;
+}
 #bestItem ul{
     display: flex;
-    justify-content: center;
-    gap: 20px;
+    justify-content: space-between;
+    width: 2800px;
+    padding: 0 20px;
 }
 #bestItem li{
     width: 400px;
@@ -121,6 +121,18 @@
     text-align: center;
     font-size: 36px;
     margin-bottom: 42px;
+}
+#hash{
+    width: 1594px;
+    margin-bottom: 30px;
+}
+#hash #hashList{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+#hash #hashList button{
+    font-size: 24px;
 }
 #suggItem ul{
     display: flex;

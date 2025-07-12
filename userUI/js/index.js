@@ -20,6 +20,24 @@ let bestItemList = [{
     title : '프린트 코튼 저지 티셔츠',
     price : '830,000',
     content : '구찌'
+},{
+    id : 4,
+    src : 'img/classic1.PNG',
+    title : '클래식핏 리넨셔츠',
+    price : '219,000',
+    content : '랄프로렌'
+},{
+    id : 5,
+    src : 'img/intarsia1.PNG',
+    title : '인타르시아 디테일의 실크 코튼 스웨터',
+    price : '2,110,000',
+    content : '구찌'
+},{
+    id : 6,
+    src : 'img/poloshirt1.PNG',
+    title : '커스텀 슬림핏 소프트 코튼 폴로 셔츠',
+    price : '125,300',
+    content : '랄프로렌'
 }];
 
 // 추천 아이템 리스트 데이터
@@ -72,6 +90,7 @@ const pagerItems = document.querySelectorAll("#sliderPager li");
 
 // 아이템 리스트 관련 요소
 const bestItemListEl = document.getElementById("bestItemList");
+const bestItem = document.getElementById("bestItem");
 const suggItemListEl = document.getElementById("suggItemList");
 const productItemListEl = document.getElementById("productItemList");
 // 템플릿
@@ -155,3 +174,40 @@ let sliderIndex = 0;
 
     }
     itemList();
+
+    // 스와이프
+    function enableDragScroll(container) {
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+
+    container.addEventListener('mousedown', (e) => {
+        isDown = true;
+        container.classList.add('dragging');
+        startX = e.pageX - container.offsetLeft;
+        scrollLeft = container.scrollLeft;
+    });
+
+    container.addEventListener('mouseleave', () => {
+        isDown = false;
+        container.classList.remove('dragging');
+    });
+
+    container.addEventListener('mouseup', () => {
+        isDown = false;
+        container.classList.remove('dragging');
+    });
+
+    container.addEventListener('mousemove', (e) => {
+        if (!isDown) return;
+        e.preventDefault();
+        const x = e.pageX - container.offsetLeft;
+        const walk = (x - startX) * 1; // 드래그 속도 조절
+        container.scrollLeft = scrollLeft - walk;
+    });
+}
+
+// 적용
+enableDragScroll(bestItem);
+
+    
