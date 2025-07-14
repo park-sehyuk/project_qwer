@@ -25,7 +25,7 @@
     align-items: center;
     position: absolute;
     top: 110px;
-    left: 60px;
+    left: 55px;
 }
 
 .userimg img {
@@ -33,6 +33,42 @@
     max-height: 100%; 
     object-fit: contain;
 }
+
+.userimg2 img {
+    max-width: 100%; 
+    max-height: 100%; 
+    object-fit: contain;
+}
+
+
+.userimg2{
+    width: 100px; 
+    height: 100px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 500px;
+    left: 40px;
+}
+
+.userimg3 img {
+    max-width: 100%; 
+    max-height: 100%; 
+    object-fit: contain;
+}
+
+
+.userimg3 { 
+    width: 100px; 
+    height: 100px;  
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    position: absolute; 
+    top: 860px; 
+    left: 27px; 
+} 
 
 .left-side .userList{
     font-size: 40px;
@@ -43,6 +79,7 @@
     height: 360px;
     background-color: rgb(0, 0, 0);
     border-bottom: 1px solid white;
+    padding-left: 50px;
 }
 
 .left-side .postList{
@@ -52,8 +89,9 @@
     line-height: 360px;
     width: 500px;
     height: 360px;
-    background-color: rgb(99, 99, 99);
-    border-bottom: 1px solid white;
+    background-color: rgb(117, 117, 117);
+    border-bottom: 1px solid rgb(153, 153, 153);
+    padding-left: 50px;
 }
 
 .left-side .categoryList {
@@ -61,16 +99,17 @@
     color: white;
     width: 500px;
     height: 360px;
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(117, 117, 117);
     border-bottom: 1px solid white;
     box-sizing: border-box;
 
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center; /* 이 부분이 이미지와 텍스트 블록 자체를 중앙 정렬합니다. */
+    align-items: center; 
     gap: 15px;
-    text-align: center; /* <<-- 이 부분이 텍스트 내용을 중앙 정렬합니다. */
+    text-align: center;
+    padding-left: 70px;
 }
 .top-right{
     width: 1420px;
