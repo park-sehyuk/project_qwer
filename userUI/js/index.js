@@ -1,6 +1,9 @@
 // 슬라이더 이미지 배열
 let sliderImgs = ['img/sliderImg1.png', 'img/gucciSlider.jpg', 'img/sliderImg3.jpg', 'img/sliderImg4.jpg'];
 
+// 모든 아이텀 저장 배열
+let itemLists = [];
+
 // 베스트 아이템 리스트 데이터
 let bestItemList = [{
     id : 1,
@@ -92,9 +95,26 @@ const pagerItems = document.querySelectorAll("#sliderPager li");
 const bestItemListEl = document.getElementById("bestItemList");
 const bestItem = document.getElementById("bestItem");
 const suggItemListEl = document.getElementById("suggItemList");
+const gucciBtn = document.getElementById("gucciBtn");
+const poloBtn = document.getElementById("poloBtn");
+const maisonBtn = document.getElementById("maisonBtm");
+const chanelBtn = document.getElementById("chanelBtn");
 const productItemListEl = document.getElementById("productItemList");
 // 템플릿
 const items = document.getElementById('items');
+
+function loadItems(){
+    const data = localStorage.getItem('itmeList');
+    if(data){
+        const parsed = JSON.parse(data);
+        itemLists.push(...parsed);
+    }
+}
+
+function saveItems(){
+    localStorage.setItem('itmeList', JSON.stringify(itemLists));
+}
+
 
 let sliderIndex = 0;
 
@@ -156,16 +176,82 @@ let sliderIndex = 0;
 
         suggItemList.forEach(item => {
             const cloneLi = items.content.firstElementChild.cloneNode(true);
-            cloneLi.querySelector('img').src = item.src;
-            cloneLi.querySelector('.title').textContent = item.title;
-            cloneLi.querySelector('.price').textContent = `가격: ${item.price}원`;
-            cloneLi.querySelector('.content').textContent = item.content;
-            suggItemListEl.appendChild(cloneLi);
+                cloneLi.querySelector('img').src = item.src;
+                cloneLi.querySelector('img').alt = item.title;
+                cloneLi.querySelector('.title').textContent = item.title;
+                cloneLi.querySelector('.price').textContent = `가격: ${item.price}원`;
+                cloneLi.querySelector('.content').textContent = item.content;
+                suggItemListEl.appendChild(cloneLi);
+        });
+        // 구찌 탭 기능
+        gucciBtn.addEventListener("click", () => {
+            suggItemListEl.innerHTML = '';
+            suggItemList.forEach(item => {
+                if(item.content === '구찌'){
+                    const cloneLi = items.content.firstElementChild.cloneNode(true);
+                    cloneLi.querySelector('img').src = item.src;
+                    cloneLi.querySelector('img').alt = item.title;
+                    cloneLi.querySelector('.title').textContent = item.title;
+                    cloneLi.querySelector('.price').textContent = `가격: ${item.price}원`;
+                    cloneLi.querySelector('.content').textContent = item.content;
+                    suggItemListEl.appendChild(cloneLi);
+                }
+            });
         });
 
+        // 릴프로렌 탭 기능
+        poloBtn.addEventListener("click", () => {
+            suggItemListEl.innerHTML = '';
+            suggItemList.forEach(item => {
+                if(item.content === '랄프로렌'){
+                    const cloneLi = items.content.firstElementChild.cloneNode(true);
+                    cloneLi.querySelector('img').src = item.src;
+                    cloneLi.querySelector('img').alt = item.title;
+                    cloneLi.querySelector('.title').textContent = item.title;
+                    cloneLi.querySelector('.price').textContent = `가격: ${item.price}원`;
+                    cloneLi.querySelector('.content').textContent = item.content;
+                    suggItemListEl.appendChild(cloneLi);
+                }
+            });
+        });
+
+        // 메종키츠네 탭 기능
+        // maisonBtn.addEventListener("click", () => {
+        //     suggItemListEl.innerHTML = '';
+        //     suggItemList.forEach(item => {
+        //         if(item.content === '메종 키츠네'){
+        //             const cloneLi = items.content.firstElementChild.cloneNode(true);
+        //             cloneLi.querySelector('img').src = item.src;
+        //             cloneLi.querySelector('img').alt = item.title;
+        //             cloneLi.querySelector('.title').textContent = item.title;
+        //             cloneLi.querySelector('.price').textContent = `가격: ${item.price}원`;
+        //             cloneLi.querySelector('.content').textContent = item.content;
+        //             suggItemListEl.appendChild(cloneLi);
+        //         }
+        //     });
+        // });
+
+        // // 샤넬 탭 기능
+        // chanelBtn.addEventListener("click", () => {
+        //     suggItemListEl.innerHTML = '';
+        //     suggItemList.forEach(item => {
+        //         if(item.content === '샤넬'){
+        //             const cloneLi = items.content.firstElementChild.cloneNode(true);
+        //             cloneLi.querySelector('img').src = item.src;
+        //             cloneLi.querySelector('img').alt = item.title;
+        //             cloneLi.querySelector('.title').textContent = item.title;
+        //             cloneLi.querySelector('.price').textContent = `가격: ${item.price}원`;
+        //             cloneLi.querySelector('.content').textContent = item.content;
+        //             suggItemListEl.appendChild(cloneLi);
+        //         }
+        //     });
+        // });
+
+        // 이달의 상품 리스트
         productItemList.forEach(item => {
             const cloneLi = items.content.firstElementChild.cloneNode(true);
             cloneLi.querySelector('img').src = item.src;
+            cloneLi.querySelector('img').alt = item.title;
             cloneLi.querySelector('.title').textContent = item.title;
             cloneLi.querySelector('.price').textContent = `가격: ${item.price}원`;
             cloneLi.querySelector('.content').textContent = item.content;
@@ -210,3 +296,5 @@ let sliderIndex = 0;
 // 적용
 enableDragScroll(bestItem);
 
+
+loadItems();
