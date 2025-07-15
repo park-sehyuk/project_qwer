@@ -15,6 +15,7 @@
 #mainslider #slider img{
     width: 1594px;
     height: 880px;
+    object-fit: cover;
 }
 #slliderController{
     position: relative;

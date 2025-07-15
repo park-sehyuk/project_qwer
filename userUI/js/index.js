@@ -227,7 +227,9 @@ function saveItems(){
     localStorage.setItem('itmeList', JSON.stringify(itemLists));
 }
 
-localStorage.setItem("itmeDetail", JSON.stringify(suggItemList));
+function saveDetail(item){
+    localStorage.setItem("itmeDetail", JSON.stringify(item));
+}
 
 let sliderIndex = 0;
 
@@ -279,7 +281,6 @@ let sliderIndex = 0;
         // 베스트 아이템 리스트
         bestItemList.forEach(item => {
             const cloneLi = items.content.firstElementChild.cloneNode(true);
-            
             cloneLi.querySelector('img').src = item.src;
             cloneLi.querySelector('.title').textContent = item.title;
             cloneLi.querySelector('.price').textContent = `가격: ${parseFloat(item.price).toLocaleString()}원`;
@@ -293,7 +294,14 @@ let sliderIndex = 0;
         suggItemList.forEach((item,i) => {
             if(i > 2) return; // 3개까지만 표시
                 const cloneLi = items.content.firstElementChild.cloneNode(true);
-                cloneLi.querySelector('a').href = 'production/detail.html?name=' + item.name;
+                const link = cloneLi.querySelector('a');
+                link.href = 'production/detail.html?name=' + encodeURIComponent(item.name); // 한글 대비
+
+                // 클릭 시 localStorage 저장
+                link.addEventListener('click', (e) => {
+                    localStorage.setItem('detailItem', JSON.stringify(item));
+                });
+
                 cloneLi.querySelector('img').src = item.imageUrl;
                 cloneLi.querySelector('img').alt = item.name;
                 cloneLi.querySelector('.title').textContent = item.name;
@@ -301,6 +309,7 @@ let sliderIndex = 0;
                 cloneLi.querySelector('.content').textContent = item.content;
                 suggItemListEl.appendChild(cloneLi);
         });
+
         // 구찌 탭 기능
         gucciBtn.addEventListener("click", () => {
             suggItemListEl.innerHTML = '';
@@ -311,13 +320,20 @@ let sliderIndex = 0;
             suggFilter.forEach((item,i) => {     
                 if(item.content === '구찌'){
                     const cloneLi = items.content.firstElementChild.cloneNode(true);
-                    cloneLi.querySelector('a').href = 'production/detail.html?name=' + item.name;
+                    const link = cloneLi.querySelector('a');
+                    link.href = 'production/detail.html?name=' + encodeURIComponent(item.name); // 한글 대비
+
+                    // 클릭 시 localStorage 저장
+                    link.addEventListener('click', (e) => {
+                        localStorage.setItem('detailItem', JSON.stringify(item));
+                    });
                     cloneLi.querySelector('img').src = item.imageUrl;
                     cloneLi.querySelector('img').alt = item.name;
                     cloneLi.querySelector('.title').textContent = item.name;
                     cloneLi.querySelector('.price').textContent = `가격: ${parseFloat(item.price).toLocaleString()}원`;
                     cloneLi.querySelector('.content').textContent = item.content;
                     suggItemListEl.appendChild(cloneLi);
+                    saveDetail(item);
                 }
             });
         });
@@ -332,7 +348,13 @@ let sliderIndex = 0;
             suggFilter.forEach((item,i) => {
                 if(item.content === '랄프로렌'){
                     const cloneLi = items.content.firstElementChild.cloneNode(true);
-                    cloneLi.querySelector('a').href = 'production/detail.html?name=' + item.name;
+                    const link = cloneLi.querySelector('a');
+                    link.href = 'production/detail.html?name=' + encodeURIComponent(item.name); // 한글 대비
+
+                    // 클릭 시 localStorage 저장
+                    link.addEventListener('click', (e) => {
+                        localStorage.setItem('detailItem', JSON.stringify(item));
+                    });
                     cloneLi.querySelector('img').src = item.imageUrl;
                     cloneLi.querySelector('img').alt = item.name;
                     cloneLi.querySelector('.title').textContent = item.name;
@@ -353,7 +375,13 @@ let sliderIndex = 0;
             suggFilter.forEach((item,i) => {
                 if(item.content === '메종 키츠네'){
                     const cloneLi = items.content.firstElementChild.cloneNode(true);
-                    cloneLi.querySelector('a').href = 'production/detail.html?name=' + item.name;
+                    const link = cloneLi.querySelector('a');
+                    link.href = 'production/detail.html?name=' + encodeURIComponent(item.name); // 한글 대비
+
+                    // 클릭 시 localStorage 저장
+                    link.addEventListener('click', (e) => {
+                        localStorage.setItem('detailItem', JSON.stringify(item));
+                    });
                     cloneLi.querySelector('img').src = item.imageUrl;
                     cloneLi.querySelector('img').alt = item.name;
                     cloneLi.querySelector('.title').textContent = item.name;
@@ -374,7 +402,13 @@ let sliderIndex = 0;
             suggFilter.forEach((item,i) => {
                 if(item.content === '발렌시아가'){
                     const cloneLi = items.content.firstElementChild.cloneNode(true);
-                    cloneLi.querySelector('a').href = 'production/detail.html?name=' + item.name;
+                    const link = cloneLi.querySelector('a');
+                    link.href = 'production/detail.html?name=' + encodeURIComponent(item.name); // 한글 대비
+
+                    // 클릭 시 localStorage 저장
+                    link.addEventListener('click', (e) => {
+                        localStorage.setItem('detailItem', JSON.stringify(item));
+                    });
                     cloneLi.querySelector('img').src = item.imageUrl;
                     cloneLi.querySelector('img').alt = item.name;
                     cloneLi.querySelector('.title').textContent = item.name;

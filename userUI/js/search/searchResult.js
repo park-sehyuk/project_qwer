@@ -141,12 +141,14 @@ const productData = [{
     }];
 
 
-    const ITEMS_PER_PAGE = 12; 
+    const ITEMS_PER_PAGE = 12;
 
     let currentPage = parseInt(localStorage.getItem('currentPage') || '1');
     let currentSort = localStorage.getItem('currentSort') || 'popular';
+    let wishList = new Set(JSON.parse(localStorage.getItem('wishList') || '[]'));
 
-    const searchResult = document.getElementById('searchResult');
+    const search = document.getElementById('searchResult');
+
     const grid = document.getElementById('product-grid');
     const totalItemsEl = document.getElementById('total-items');
     const paginationEl = document.getElementById('pagination');
@@ -156,20 +158,17 @@ const productData = [{
 
 
     function render() {
+        localStorage.setItem('currentPage', currentPage);
+        localStorage.setItem('currentSort', currentSort);
+        localStorage.setItem('wishList', JSON.stringify([...wishList]));
 
-        searchResult.textContent = ``;
-
-
-        sessionStorage.setItem('currentPage', currentPage);
-        sessionStorage.setItem('currentSort', currentSort);
-
-        let sortedProducts = [...productData]; 
+        let sortedProducts = [...productData];
         switch (currentSort) {
             case 'price_desc':
-                sortedProducts.sort((a, b) => b.price - a.price); 
+                sortedProducts.sort((a, b) => b.price - a.price);
                 break;
             case 'price_asc':
-                sortedProducts.sort((a, b) => a.price - b.price); 
+                sortedProducts.sort((a, b) => a.price - b.price);
                 break;
         }
 
@@ -177,17 +176,28 @@ const productData = [{
         const endIndex = startIndex + ITEMS_PER_PAGE;
         const itemsForPage = sortedProducts.slice(startIndex, endIndex);
 
-        grid.innerHTML = itemsForPage.map(product => `
-            <div class="product-item">
-                <div class="img-wrapper">
-                    <img src="${product.imageUrl}" alt="${product.name}">
+        grid.innerHTML = itemsForPage.map(product => {
+            const isWished = wishList.has(product.name);
+            return `
+                <div class="product-item">
+                    <div class="img-wrapper">
+                        <a href="../production/detail.html?productName=${encodeURIComponent(product.name)}">
+                            <img src="${product.imageUrl}" alt="${product.name}">
+                        </a>
+                        <button class="wish-button ${isWished ? 'active' : ''}" data-product-name="${product.name}">
+                            ♥
+                        </button>
+                    </div>
+                    <div class="info">
+                        <div class="brand">${product.content}</div>
+                        <a href="../production/detail.html?productName=${encodeURIComponent(product.name)}">
+                            <div class="name">${product.name}</div>
+                        </a>
+                        <div class="price">${parseFloat(product.price).toLocaleString()}원</div>
+                    </div>
                 </div>
-                <div class="info">
-                    <div class="name">${product.name}</div>
-                    <div class="price">${parseFloat(product.price).toLocaleString()}원</div>
-                </div>
-            </div>
-        `).join(''); 
+            `;
+        }).join('');
 
         renderPagination(sortedProducts.length);
 
@@ -198,7 +208,7 @@ const productData = [{
 
     function renderPagination(totalItems) {
         const totalPages = Math.ceil(totalItems / ITEMS_PER_PAGE);
-        paginationEl.innerHTML = ''; 
+        paginationEl.innerHTML = '';
 
         Array.from({ length: totalPages }, (_, i) => i + 1).forEach(page => {
             const li = document.createElement('li');
@@ -210,7 +220,7 @@ const productData = [{
             }
             button.addEventListener('click', () => {
                 currentPage = page;
-                render(); 
+                render();
             });
             li.appendChild(button);
             paginationEl.appendChild(li);
@@ -227,7 +237,7 @@ const productData = [{
         document.querySelector('.sort-dropdown').addEventListener('click', (e) => {
             if (e.target.tagName === 'A') {
                 currentSort = e.target.dataset.sort;
-                currentPage = 1; 
+                currentPage = 1;
                 render();
             }
         });
@@ -235,10 +245,20 @@ const productData = [{
         window.addEventListener('click', () => {
             sortContainer.classList.remove('active');
         });
+
+        grid.addEventListener('click', (e) => {
+            const wishButton = e.target.closest('.wish-button');
+            if (wishButton) {
+                const productName = wishButton.dataset.productName;
+                if (wishList.has(productName)) {
+                    wishList.delete(productName); 
+                } else {
+                    wishList.add(productName); 
+                }
+                render();
+            }
+        });
     }
 
-
-    loadItems();
     setupEventListeners(); 
     render(); 
-
