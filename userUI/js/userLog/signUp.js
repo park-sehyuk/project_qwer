@@ -30,7 +30,13 @@ checkIdButton.addEventListener('click', function () {
     userIdInput.focus();
     return;
   }
-  alert(`'${userId}'는(은) 사용 가능한 아이디입니다.`);
+  const existingUser = users.find((user) => user.id === userId);
+  if (existingUser) {
+    alert(`'${userId}'는(은) 이미 사용중인 아이디입니다.`);
+    userIdInput.focus();
+  } else {
+    alert(`'${userId}'는(은) 사용 가능한 아이디입니다.`);
+  }
 });
 
 function pwMatch() {
@@ -147,10 +153,12 @@ function usersData() {
 function loadUser() {
   const data = localStorage.getItem('userInfo');
   if (data) {
-    const parsed = JSON.parse(data);
-    users.push(...parsed);
+    users = JSON.parse(data);
+  } else {
+    users = [];
   }
 }
+
 submitButton.addEventListener('click', function (event) {
   event.preventDefault();
   if (!required()) {
@@ -180,8 +188,9 @@ submitButton.addEventListener('click', function (event) {
   }
   alert('회원가입이 완료되었습니다! 환영합니다!');
   users.push({
-    userId: userIdInput.value,
+    id: userIdInput.value,
     userName: userNameInput.value,
+    password: userPwInput.value,
     userphone: phoneInput.value,
     userEmail: emailIdInput.value + '@' + emailDomainInput.value,
     userBirth: userBirthdateInput.value,
@@ -193,4 +202,6 @@ cancelButton.addEventListener('click', function () {
   window.location.href = '../index.html';
 });
 
-loadUser();
+document.addEventListener('DOMContentLoaded', function () {
+  loadUser();
+});

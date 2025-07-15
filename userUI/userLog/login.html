@@ -1,49 +1,82 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>QWER</title>
-    <link rel="stylesheet" href="../css/base.css">
-    <link rel="stylesheet" href="../css/commen.css">
-    <link rel="stylesheet" href="../css/userLog/login.css">
-</head>
-<body>
-    <div id="wrapper">
-        <h1>LOGIN</h1>
-        <div id="loginOption">
-            <div id="loginSelect">
-                <button id="loginSel" class="active">회원</button>
-                <button id="nonMemberSel">비회원</button>
-            </div>
-            <div id="loginForm">
-                <h3>회원 로그인</h3>
-                    <div class="inputBox">
-                        <input type="text" id="id" name="id" placeholder="아이디">
-                        <input type="password" id="password" name="password" placeholder="패스워드" >
-                    </div>
-                    <div id="idSaved">
-                        <input type="checkbox" id="idSave">
-                        <p>아이디 저장</p>
-                    </div>
-                    <div id="loginBtn">
-                        <button id="submit">로그인</button>
-                    </div>
-                    <div id="option">
-                        <p><a href="#">아이디 찾기</a></p>
-                        <p><a href="#">비밀번호 찾기</a></p>
-                        <p><a href="#">회원가입</a></p>
-                    </div>
-            </div>
-            <div id="nonMember">
-                <h3>비회원 주문조회</h3>
-                    <div class="inputBox">
-                        <input type="text" id="reseNumr" name="reserNum" placeholder="예약번호">
-                        <input type="text" id="userName" name="userName" placeholder="고객명" >
-                    </div>
-                    <div id="nonBtn">
-                        <button id="submit">주문조회</button>
-                    </div>
+    <link rel="stylesheet" href="../css/base.css" />
+    <link rel="stylesheet" href="../css/commen.css" />
+    <link rel="stylesheet" href="../css/userLog/login.css" />
+  </head>
+  <body>
+    <div class="login-container">
+      <div class="form-wrapper">
+        <h1 class="main-title">LOGIN</h1>
+
+        <div class="tab-nav">
+          <a href="#" class="tab-item active" id="member-tab">회원</a>
+          <a href="#" class="tab-item" id="non-member-tab">비회원</a>
         </div>
+
+        <div class="form-content">
+          <form action="#" id="member-login-form">
+            <div class="form-group">
+              <label for="user-id">아이디</label>
+              <input type="text" id="user-id" />
+            </div>
+
+            <div class="form-group">
+              <label for="user-password">패스워드</label>
+              <div class="password-input-wrapper">
+                <input type="password" id="user-password" />
+                <button
+                  type="button"
+                  class="toggle-password-btn"
+                  id="toggle-password"
+                >
+                  <img
+                    src="../img/open-eyes.jpeg"
+                    id="toggle-eye-icon"
+                    alt="눈"
+                  />
+                </button>
+              </div>
+            </div>
+
+            <div class="options-group">
+              <label class="checkbox-label">
+                <input type="checkbox" class="save-id-check" />
+                아이디 저장
+              </label>
+            </div>
+
+            <button type="submit" class="btn btn-login">로그인</button>
+          </form>
+          <form action="#" id="non-member-order-form" class="hidden">
+            <h2 class="sub-title">비회원 주문조회</h2>
+            <div class="form-group">
+              <label for="reservation-number">예약번호</label>
+              <input type="text" id="reservation-number" />
+            </div>
+            <div class="form-group">
+              <label for="customer-name">고객명</label>
+              <input type="text" id="customer-name" />
+            </div>
+            <button type="submit" class="btn btn-order-inquiry">
+              주문조회
+            </button>
+          </form>
+
+          <div class="util-links">
+            <a href="../userLog/find.html">아이디 찾기</a>
+            <span class="separator">|</span>
+            <a href="../userLog/findpw.html">비밀번호 찾기</a>
+            <span class="separator">|</span>
+            <a href="../userLog/signUp.html">회원가입</a>
+          </div>
+        </div>
+      </div>
     </div>
-</body>
+    <script src="../js/userLog/login.js"></script>
+  </body>
+</html>
