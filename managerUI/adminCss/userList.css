@@ -108,7 +108,7 @@
 .payment-cal{
     width: 250px;
     height: 40px;
-    gap: 15px;
+    gap: 10px;
     display: flex;
     background-color: white;
     border-radius: 10px;
@@ -116,6 +116,19 @@
     padding-right: 10px;
     align-items: center;
     border: 1px solid black;
+    font-size: 13px;
+}
+
+
+.dateImg{
+    background-image: url(../img/calendar.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 17px;
+    height: 17px;
+    border-radius: 80px;
+    margin-left: 4px;
+    margin-bottom: 2px;
 }
 
 .payment-cal .right{
@@ -124,15 +137,7 @@
     height: 15px;
     background-size: 100%;
     background-repeat: no-repeat;
-    opacity: 0.5;
-}
-
-.payment-cal .date{
-    background-image: url(../img/date.png);
-    width: 20px;
-    height: 20px;
-    background-size: 100%;
-    background-repeat: no-repeat;
+    opacity: 0.5
 }
 
 .button-tap .starline{

@@ -39,12 +39,12 @@
                     <p class="right-Title2">구매하신 회원분들의 내역조회 확인입니다.</p>
                 </div>
                 <div class="payment">
+
                     <p class="payment-text">결제 일시</p>
                     <div class="payment-cal">
-                        <p>2025-05-25</p>
-                        <p class="right"></p>
-                        <p>2025-07-06</p>
-                        <p class="date"></p>
+                        <input type="date" id="startDate" value="2025-05-25">
+                      <input type="date" id="endDate" value="2025-07-06">
+                       
                     </div>
                 </div>
                 <div class="button-tap">
@@ -55,6 +55,7 @@
                     <button class="download">엑셀 다운로드</button>
                 </div>
             </div>
+
 
             <table class="user-data-table">
                 <thead>
@@ -68,200 +69,15 @@
                         <th>구매일시</th>
                         <th>결제수단</th>
                         <th>세금 계산서</th>
+                        <th>관리</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>user001</td>
-                        <td>김철수</td>
-                        <td>서울시 강남구</td>
-                        <td>010-1234-5678</td>
-                        <td>50,000원</td>
-                        <td>티셔츠</td>
-                        <td>2025-06-01 10:00</td>
-                        <td>신용카드</td>
-                        <td>발행 요청</td>
-                    </tr>
-                    <tr>
-                        <td>user002</td>
-                        <td>이영희</td>
-                        <td>경기도 성남시</td>
-                        <td>010-9876-5432</td>
-                        <td>120,000원</td>
-                        <td>바지</td>
-                        <td>2025-06-05 14:30</td>
-                        <td>계좌이체</td>
-                        <td>발행 완료</td>
-                    </tr>
-                    <tr>
-                        <td>user003</td>
-                        <td>박민수</td>
-                        <td>부산시 해운대구</td>
-                        <td>010-2345-6789</td>
-                        <td>85,000원</td>
-                        <td>책상</td>
-                        <td>2025-06-10 11:15</td>
-                        <td>신용카드</td>
-                        <td>발행 완료</td>
-                    </tr>
-                    <tr>
-                        <td>user004</td>
-                        <td>최지영</td>
-                        <td>대구시 수성구</td>
-                        <td>010-3456-7890</td>
-                        <td>30,000원</td>
-                        <td>마우스</td>
-                        <td>2025-06-12 16:00</td>
-                        <td>카카오페이</td>
-                        <td>해당 없음</td>
-                    </tr>
-                    <tr>
-                        <td>user005</td>
-                        <td>정현우</td>
-                        <td>인천시 연수구</td>
-                        <td>010-4567-8901</td>
-                        <td>250,000원</td>
-                        <td>모니터</td>
-                        <td>2025-06-15 09:45</td>
-                        <td>계좌이체</td>
-                        <td>발행 요청</td>
-                    </tr>
-                    <tr>
-                        <td>user006</td>
-                        <td>윤서아</td>
-                        <td>광주시 서구</td>
-                        <td>010-5678-9012</td>
-                        <td>70,000원</td>
-                        <td>키보드</td>
-                        <td>2025-06-20 13:20</td>
-                        <td>네이버페이</td>
-                        <td>발행 완료</td>
-                    </tr>
-                    <tr>
-                        <td>user007</td>
-                        <td>하준</td>
-                        <td>대전시 유성구</td>
-                        <td>010-6789-0123</td>
-                        <td>15,000원</td>
-                        <td>연필 세트</td>
-                        <td>2025-06-22 17:00</td>
-                        <td>신용카드</td>
-                        <td>해당 없음</td>
-                    </tr>
-                    <tr>
-                        <td>user008</td>
-                        <td>이지은</td>
-                        <td>울산시 남구</td>
-                        <td>010-7890-1234</td>
-                        <td>99,000원</td>
-                        <td>의자</td>
-                        <td>2025-06-25 10:00</td>
-                        <td>계좌이체</td>
-                        <td>발행 요청</td>
-                    </tr>
-                    <tr>
-                        <td>user009</td>
-                        <td>강동원</td>
-                        <td>세종시 보람동</td>
-                        <td>010-8901-2345</td>
-                        <td>45,000원</td>
-                        <td>커피 머그</td>
-                        <td>2025-06-28 11:00</td>
-                        <td>신용카드</td>
-                        <td>발행 완료</td>
-                    </tr>
-                    <tr>
-                        <td>user010</td>
-                        <td>신혜선</td>
-                        <td>제주시 연동</td>
-                        <td>010-9012-3456</td>
-                        <td>60,000원</td>
-                        <td>담요</td>
-                        <td>2025-07-01 09:00</td>
-                        <td>카카오페이</td>
-                        <td>해당 없음</td>
-                    </tr>
-                    <tr>
-                        <td>user009</td>
-                        <td>강동원</td>
-                        <td>세종시 보람동</td>
-                        <td>010-8901-2345</td>
-                        <td>45,000원</td>
-                        <td>커피 머그</td>
-                        <td>2025-06-28 11:00</td>
-                        <td>신용카드</td>
-                        <td>발행 완료</td>
-                    </tr>
-                    <tr>
-                        <td>user010</td>
-                        <td>신혜선</td>
-                        <td>제주시 연동</td>
-                        <td>010-9012-3456</td>
-                        <td>60,000원</td>
-                        <td>담요</td>
-                        <td>2025-07-01 09:00</td>
-                        <td>카카오페이</td>
-                        <td>해당 없음</td>
-                    </tr>
-                    <tr>
-                        <td>user011</td>
-                        <td>임준혁</td>
-                        <td>강원도 춘천시</td>
-                        <td>010-1111-2222</td>
-                        <td>35,000원</td>
-                        <td>USB 메모리</td>
-                        <td>2025-07-02 14:00</td>
-                        <td>신용카드</td>
-                        <td>발행 요청</td>
-                    </tr>
-                    <tr>
-                        <td>user012</td>
-                        <td>김나영</td>
-                        <td>충북 청주시</td>
-                        <td>010-2222-3333</td>
-                        <td>180,000원</td>
-                        <td>블렌더</td>
-                        <td>2025-07-03 16:30</td>
-                        <td>계좌이체</td>
-                        <td>발행 완료</td>
-                    </tr>
-                    <tr>
-                        <td>user013</td>
-                        <td>박서준</td>
-                        <td>전북 전주시</td>
-                        <td>010-3333-4444</td>
-                        <td>7,500원</td>
-                        <td>볼펜 세트</td>
-                        <td>2025-07-04 09:00</td>
-                        <td>휴대폰 결제</td>
-                        <td>해당 없음</td>
-                    </tr>
-                    <tr>
-                        <td>user014</td>
-                        <td>최은지</td>
-                        <td>경남 창원시</td>
-                        <td>010-4444-5555</td>
-                        <td>90,000원</td>
-                        <td>프라이팬</td>
-                        <td>2025-07-05 13:00</td>
-                        <td>신용카드</td>
-                        <td>발행 요청</td>
-                    </tr>
-                    <tr>
-                        <td>user015</td>
-                        <td>정우성</td>
-                        <td>제주도 서귀포시</td>
-                        <td>010-5555-6666</td>
-                        <td>2,500,000원</td>
-                        <td>냉장고</td>
-                        <td>2025-07-06 10:00</td>
-                        <td>무통장 입금</td>
-                        <td>발행 완료</td>
-                    </tr>
                 </tbody>
             </table>
         </div>
     </div>
+    <script src="userList.js"></script>
 </body>
 
 </html>
