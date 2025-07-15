@@ -24,7 +24,19 @@ checkIdButton.addEventListener('click', function () {
     userIdInput.focus();
     return;
   }
-  alert(`'${userId}'는(은) 사용 가능한 아이디입니다.`);
+  const idRegex = /^[a-zA-Z0-9]+$/;
+  if (!idRegex.test(userId)) {
+    alert('아이디는 영어 대소문자와 숫자만 사용할 수 있습니다.');
+    userIdInput.focus();
+    return;
+  }
+  const existingUser = users.find((user) => user.id === userId);
+  if (existingUser) {
+    alert(`'${userId}'는(은) 이미 사용중인 아이디입니다.`);
+    userIdInput.focus();
+  } else {
+    alert(`'${userId}'는(은) 사용 가능한 아이디입니다.`);
+  }
 });
 
 function pwMatch() {
@@ -51,6 +63,14 @@ function pwRules() {
   }
   if (pw.length < 8 || pw.length > 20) {
     alert('비밀번호는 8자 이상 20자 이하로 입력해주세요.');
+    userPwInput.focus();
+    return false;
+  }
+  const pwRegex = /^(?=.*[a-zA-Z])(?=.*[0-9])(?=.*[!@#$%^&*])(?=.{8,20})/;
+  if (!pwRegex.test(pw)) {
+    alert(
+      '비밀번호는 문자, 숫자, 특수문자를 모두 포함하여 8~20자로 입력해주세요.'
+    );
     userPwInput.focus();
     return false;
   }
@@ -127,9 +147,28 @@ function birthdate() {
 }
 
 let users = [];
+function usersData() {
+  localStorage.setItem('userInfo', JSON.stringify(users));
+}
+function loadUser() {
+  const data = localStorage.getItem('userInfo');
+  if (data) {
+    users = JSON.parse(data);
+  } else {
+    users = [];
+  }
+}
+
 submitButton.addEventListener('click', function (event) {
   event.preventDefault();
   if (!required()) {
+    return;
+  }
+  const userId = userIdInput.value;
+  const idRegex = /^[a-zA-Z0-9]+$/;
+  if (userId.length < 6 || userId.length > 20 || !idRegex.test(userId)) {
+    alert('아이디를 6~20자 영문/숫자로 정확히 입력해주세요.');
+    userIdInput.focus();
     return;
   }
   if (!pwRules()) {
@@ -149,14 +188,20 @@ submitButton.addEventListener('click', function (event) {
   }
   alert('회원가입이 완료되었습니다! 환영합니다!');
   users.push({
-    userId: userIdInput.value,
+    id: userIdInput.value,
     userName: userNameInput.value,
+    password: userPwInput.value,
     userphone: phoneInput.value,
-    userEmail: emailIdInput.value + '@' + emailDomainInput,
+    userEmail: emailIdInput.value + '@' + emailDomainInput.value,
     userBirth: userBirthdateInput.value,
   });
+  usersData();
 });
 
 cancelButton.addEventListener('click', function () {
   window.location.href = '../index.html';
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+  loadUser();
 });
