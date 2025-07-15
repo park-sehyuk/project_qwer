@@ -1,5 +1,3 @@
-// post.js 파일 내용
-
 document.addEventListener('DOMContentLoaded', function() {
     const editButtons = document.querySelectorAll('.edit-btn');
     const deleteButtons = document.querySelectorAll('.delete-btn');
@@ -29,10 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         inputField.focus();
                         return;
                     }
-                    console.log(`카테고리 ID: ${categoryId}, 새 이름: ${newCategoryName} (서버 전송 필요)`);
-                    // 실제 서버 통신: fetch(`/api/categories/${categoryId}`, { method: 'PUT', body: JSON.stringify({ name: newCategoryName })})
-                    // .then(response => response.json())
-                    // .then(data => { /* 성공/실패 처리 */ });
+                    console.log(`카테고리 ID: ${categoryId}, 새 이름: ${newCategoryName}`);
                     categoryNameCell.textContent = newCategoryName;
                 }
             });
@@ -54,16 +49,67 @@ document.addEventListener('DOMContentLoaded', function() {
 
             if (confirm(`${categoryId}번 카테고리를 정말 삭제하시겠습니까?`)) {
                 alert(`${categoryId}번 카테고리 삭제 진행!`);
-                // 실제 서버 통신: fetch(`/api/categories/${categoryId}`, { method: 'DELETE' })
-                // .then(response => response.json())
-                // .then(data => {
-                //     if (data.success) { rowToDelete.remove(); } else { alert('삭제 실패: ' + data.message); }
-                // })
-                // .catch(error => console.error('Error:', error));
                 rowToDelete.remove();
             } else {
                 alert('삭제를 취소했습니다.');
             }
         });
     });
+
+    const searchInput = document.querySelector('.category-search-input');
+    const searchButton = document.querySelector('.search');
+    const resetButton = document.querySelector('.starline');
+    const tableBody = document.querySelector('.category-data-table tbody');
+    const allTableRows = Array.from(tableBody.querySelectorAll('tr'));
+
+    if (searchButton && searchInput && tableBody) {
+        searchButton.addEventListener('click', function() {
+            performSearch();
+        });
+
+        searchInput.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                performSearch();
+            }
+        });
+
+        if (resetButton) {
+            resetButton.addEventListener('click', function() {
+                searchInput.value = '';
+                displayRows(allTableRows);
+            });
+        }
+    }
+
+    function performSearch() {
+        const searchTerm = searchInput.value.toLowerCase().trim();
+        const filteredRows = [];
+
+        allTableRows.forEach(row => {
+            const categoryName = row.children[1].textContent.toLowerCase();
+            if (categoryName.includes(searchTerm)) {
+                filteredRows.push(row);
+            }
+        });
+
+        displayRows(filteredRows);
+    }
+
+    function displayRows(rowsToDisplay) {
+        tableBody.innerHTML = '';
+        if (rowsToDisplay.length > 0) {
+            rowsToDisplay.forEach(row => {
+                tableBody.appendChild(row);
+            });
+        } else {
+            const noResultsRow = document.createElement('tr');
+            const noResultsCell = document.createElement('td');
+            noResultsCell.colSpan = 5;
+            noResultsCell.textContent = '검색 결과가 없습니다.';
+            noResultsCell.style.textAlign = 'center';
+            noResultsCell.style.padding = '20px';
+            noResultsRow.appendChild(noResultsCell);
+            tableBody.appendChild(noResultsRow);
+        }
+    }
 });
