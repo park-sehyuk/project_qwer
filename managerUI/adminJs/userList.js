@@ -181,18 +181,4 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-     function populateDummyUsers() {
-         const dummyUsers = [
-             { userId: 'user001', userName: '김철수', address: '서울시 강남구', userphone: '010-1111-2222', amount: '50000원', productName: '상품A', purchaseDateTime: '2025-06-01 10:00:00', paymentMethod: '카드', taxInvoiceStatus: '발행 완료' },
-             { userId: 'user002', userName: '이영희', address: '부산시 해운대구', userphone: '010-3333-4444', amount: '120000원', productName: '상품B', purchaseDateTime: '2025-06-15 14:30:00', paymentMethod: '무통장입금', taxInvoiceStatus: '요청 없음' },
-             { userId: 'user003', userName: '박민수', address: '대구시 수성구', userphone: '010-5555-6666', amount: '75000원', productName: '상품A', purchaseDateTime: '2025-07-01 09:00:00', paymentMethod: '카드', taxInvoiceStatus: '발행 예정' },
-             { userId: 'user004', userName: '최지영', address: '인천시 연수구', userphone: '010-7777-8888', amount: '20000원', productName: '상품C', purchaseDateTime: '2025-07-05 11:45:00', paymentMethod: '페이팔', taxInvoiceStatus: '발행 완료' },
-             { userId: 'user005', userName: '정수진', address: '광주시 서구', userphone: '010-9999-0000', amount: '300000원', productName: '상품D', purchaseDateTime: '2025-05-20 16:00:00', paymentMethod: '카드', taxInvoiceStatus: '요청 없음' },
-             { userId: 'user006', userName: '홍길동', address: '대전시 유성구', userphone: '010-1234-5678', amount: '90000원', productName: '상품E', purchaseDateTime: '2025-06-25 10:00:00', paymentMethod: '계좌이체', taxInvoiceStatus: '발행 예정' },
-             { userId: 'user007', userName: '강현아', address: '울산시 남구', userphone: '010-8765-4321', amount: '45000원', productName: '상품F', purchaseDateTime: '2025-07-02 13:00:00', paymentMethod: '카드', taxInvoiceStatus: '발행 완료' },
-         ];
-         if (loadUsersFromLocalStorage().length === 0) {
-             saveUsersToLocalStorage(dummyUsers);
-         }
-     }
 });
