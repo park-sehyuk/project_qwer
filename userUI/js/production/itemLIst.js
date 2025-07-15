@@ -171,17 +171,20 @@ document.addEventListener('DOMContentLoaded', () => {
             return `
                 <div class="product-item">
                     <div class="img-wrapper">
-                        <a href = '../production/detail.html${product}'><img src="${product.imageUrl}" alt="${product.name}"></a>
+                        <a href="../production/detail.html?productName=${encodeURIComponent(product.name)}">
+                            <img src="${product.imageUrl}" alt="${product.name}">
+                        </a>
                         <button class="wish-button ${isWished ? 'active' : ''}" data-product-name="${product.name}">
                             ♥
                         </button>
                     </div>
-                    <a href = ''>
                     <div class="info">
                         <div class="brand">${product.content}</div>
-                        <div class="name">${product.name}</div>
+                        <a href="../production/detail.html?productName=${encodeURIComponent(product.name)}">
+                            <div class="name">${product.name}</div>
+                        </a>
                         <div class="price">${parseFloat(product.price).toLocaleString()}원</div>
-                    </div> </a>
+                    </div>
                 </div>
             `;
         }).join('');
