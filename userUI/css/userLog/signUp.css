@@ -1,80 +1,148 @@
 @charset "UTF-8";
 
-#signUp {
-  width: 600px;
-  height: 1080px;
-  margin: 0 auto;
-  border: 2px solid black;
-  padding-top: 60px;
-  padding-left: 100px;
+body {
+    margin: 0;
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #333;
 }
-#signUp h1 {
-  margin-bottom: 10px;
+
+.form-container {
+    width: 100%;
+    max-width: 480px;
+    padding: 20px;
 }
-#signUp #newId {
-  position: relative;
-  margin-top: 50px;
+
+.form-wrapper {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
-#signUp .textInput {
-  width: 500px;
-  height: 50px;
+
+.form-title {
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+    margin: 0 0 10px 0;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #000;
+    margin-bottom: 20px;
 }
-#signUp label {
-  display: inline-block;
-  margin-bottom: 10px;
-  font-size: 18px;
-  font-weight: bold;
+
+.form-subtitle {
+    font-size: 14px;
+    color: #666;
+    text-align: center;
+    margin-bottom: 40px;
 }
-#birthDay {
-  width: 200px;
-  height: 50px;
+
+.form-group {
+    margin-bottom: 25px;
 }
-#email p span {
-  display: inline-block;
-  padding: 10px 20px;
+
+label {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 8px;
 }
-#emailId,
-#emailDomain {
-  width: 200px;
-  height: 50px;
+
+input[type="text"],
+input[type="password"],
+input[type="tel"] {
+    width: 100%;
+    padding: 12px 0;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s;
 }
+
 input::placeholder {
-  padding-left: 15px;
+    color: #aaa;
 }
-#signUp input {
-  margin-bottom: 10px;
+
+input:focus {
+    border-bottom-color: #000;
 }
-#signUp #newId button {
-  position: absolute;
-  right: 110px;
-  bottom: 20px;
-  width: 140px;
-  height: 35px;
-  border: 1px solid black;
-  color: #fff;
-  background-color: #43a9fc;
+
+.input-with-button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
-#accessionBtn {
-  margin-top: 40px;
+
+.input-with-button input {
+    flex-grow: 1; 
 }
-#accessionBtn button {
-  width: 140px;
-  height: 35px;
-  border: 1px solid black;
-  color: #fff;
-  font-size: 16px;
+
+.email-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
-#accession {
-  background-color: #43a9fc;
-  margin-left: 100px;
+
+.email-group input {
+    text-align: center;
 }
-#cancel {
-  background-color: #eee431;
-  margin-left: 30px;
+
+.email-at {
+    font-size: 16px;
+    color: #888;
 }
-.error-msg {
-  margin-left: 10px;
-  font-size: 18px;
-  color: rgb(240, 55, 55);
-  display: none;
+
+.btn {
+    border: none;
+    padding: 12px 16px;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    flex-shrink: 0; 
+}
+
+.btn-inline {
+    background-color: #e9ecef;
+    color: #495057;
+}
+
+.btn-inline:hover {
+    background-color: #dee2e6;
+}
+
+.button-group {
+    margin-top: 40px;
+    display: flex;
+    gap: 10px;
+}
+
+.button-group .btn {
+    flex-grow: 1; 
+    padding: 15px;
+    font-size: 16px;
+}
+
+.btn-primary {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.btn-primary:hover {
+    background-color: #333;
+}
+
+.btn-secondary {
+    background-color: #e9ecef;
+    color: #495057;
+    border: 1px solid #dee2e6;
+}
+
+.btn-secondary:hover {
+    background-color: #dee2e6;
 }

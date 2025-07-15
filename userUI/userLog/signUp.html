@@ -9,88 +9,60 @@
     <link rel="stylesheet" href="../css/userLog/signUp.css" />
   </head>
   <body>
-    <div id="wrapper">
-      <div id="signUp">
-        <h1>회원가입</h1>
-        <span>회원이 되어 다양한 혜택을 경험해 보세요!</span>
-        <div id="newId">
-          <label for="id"
-            >아이디<span id="id-error" class="error-msg"
-              >사용할 수 없는 아이디입니다.</span
-            ></label
-          >
-          <p>
-            <input
-              type="text"
-              placeholder="아이디 입력(6~20자)"
-              id="id"
-              class="textInput"
-            />
-            <button>중복 확인</button>
-          </p>
+<div class="form-container">
+        <div class="form-wrapper">
+            <h1 class="form-title">회원가입</h1>
+            
+            <form action="#">
+                <div class="form-group">
+                    <label for="user-id">아이디</label>
+                    <div class="input-with-button">
+                        <input type="text" id="user-id" placeholder="아이디 입력 (6~20자)">
+                        <button type="button" class="btn btn-inline">중복 확인</button>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="user-password">비밀번호</label>
+                    <input type="password" id="user-password" placeholder="비밀번호 입력 (문자, 숫자, 특수문자 포함 8~20자)">
+                </div>
+
+                <div class="form-group">
+                    <label for="user-password-confirm">비밀번호 확인</label>
+                    <input type="password" id="user-password-confirm" placeholder="비밀번호 재입력">
+                </div>
+
+                <div class="form-group">
+                    <label for="user-name">이름</label>
+                    <input type="text" id="user-name" placeholder="이름을 입력해주세요.">
+                </div>
+
+                <div class="form-group">
+                    <label for="user-phone">전화번호</label>
+                    <input type="tel" id="user-phone" placeholder="휴대폰 번호 입력 ('-' 제외 11자리 입력)">
+                </div>
+                
+                <div class="form-group">
+                    <label for="user-email-id">이메일 주소</label>
+                    <div class="email-group">
+                        <input type="text" id="user-email-id">
+                        <span class="email-at">@</span>
+                        <input type="text" id="user-email-domain">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="user-birthdate">생년월일</label>
+                    <input type="text" id="user-birthdate" placeholder="예: 19980924">
+                </div>
+
+                <div class="button-group">
+                    <button type="submit" class="btn btn-primary">가입하기</button>
+                    <button type="button" class="btn btn-secondary">가입취소</button>
+                </div>
+            </form>
         </div>
-        <div id="newPw">
-          <label for="pw"
-            >비밀번호<span id="pw-error" class="error-msg"
-              >20자 이내의 비밀번호를 입력해주세요.</span
-            ></label
-          ><br />
-          <input
-            type="text"
-            placeholder="비밀번호 입력(문자, 숫자, 특수문자 포함 8~20자)"
-            id="pw"
-            class="textInput"
-          />
-        </div>
-        <div id="newPwCheck">
-          <label for="pwCheck"
-            >비밀번호 확인<span id="pwCheck-error" class="error-msg"
-              >비밀번호가 일치하지 않습니다.</span
-            ></label
-          ><br />
-          <input
-            type="text"
-            placeholder="비밀번호 재입력"
-            id="pwCheck"
-            class="textInput"
-          />
-        </div>
-        <div id="name">
-          <label for="userName">이름</label><br />
-          <input
-            type="text"
-            placeholder="이름을 입력해주세요."
-            id="userName"
-            class="textInput"
-          />
-        </div>
-        <div id="phoneNumber">
-          <label for="number">전화번호</label><br />
-          <input
-            type="text"
-            placeholder="휴대폰 번호 입력('-'제외 11자리 입력)"
-            id="number"
-            class="textInput"
-          />
-        </div>
-        <div id="email">
-          <label for="emailId">이메일 주소</label>
-          <p>
-            <input type="text" placeholder="이메일 주소" id="emailId" />
-            <span>@</span>
-            <input type="text" placeholder="naver.com" id="emailDomain" />
-          </p>
-        </div>
-        <div id="birth">
-          <label for="birthDay">생년월일</label><br />
-          <input type="date" name="birthDay" id="birthDay" />
-        </div>
-        <div id="accessionBtn">
-          <button id="accession">가입하기</button>
-          <button id="cancel">가입취소</button>
-        </div>
-      </div>
     </div>
-    <script></script>
+    <script src="../js/userLog/signUp.js"></script>
   </body>
 </html>
