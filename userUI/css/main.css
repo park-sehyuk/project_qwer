@@ -1,13 +1,19 @@
 @charset "UTF-8";
 
+#wrapper{
+    min-width: 1594px;
+}
 #mainslider{
     position: relative;
-    width: 1900px;
-    margin: 0 auto;
     margin-bottom: 160px;
+    overflow: hidden;
+}
+#slider{
+    width: 1594px;
+    margin: 0 auto;
 }
 #mainslider #slider img{
-    width: 100%;
+    width: 1594px;
     height: 880px;
 }
 #slliderController{
@@ -37,7 +43,7 @@
     text-indent: -99999px;
 }
 #sliderController #sliderPager .active button{
-    background-color: #ddd;
+    background-color: #000;
 }
 
 /* 메인 슬라이더 이전/다음 버튼 */
@@ -45,7 +51,6 @@
     position: absolute;
     top: 50%;
     left: 60px;
-    background-color: #ddd;
 }
 #sliderController .prew button{
     width: 19px;
@@ -57,7 +62,6 @@
     position: absolute;
     top: 50%;
     right: 60px;
-    background-color: #ddd;
 }
 #sliderController .next button{
     width: 19px;
@@ -68,26 +72,27 @@
 }
 
 /* best 아이템 */
-#bestList{
-    width: 1594px;
-    margin: 0 auto;
-    margin-bottom: 160px;
-}
 #bestList h1{
     text-align: center;
     font-size: 36px;
     margin-bottom: 42px;
 }
+#bestList #bestItem{
+    overflow: hidden;
+    margin-bottom: 160px;
+}
 #bestItem ul{
     display: flex;
     justify-content: space-between;
+    width: 2800px;
+    padding: 0 20px;
 }
 #bestItem li{
-    width: 503px;
+    width: 400px;
 }
 #bestItem li img{
     width: 100%;
-    height: 694px;
+    height: 650px;
     margin-bottom: 7px;
 }
 #bestItem li .name{
@@ -117,16 +122,29 @@
     font-size: 36px;
     margin-bottom: 42px;
 }
+#hash{
+    width: 1594px;
+    margin-bottom: 30px;
+}
+#hash #hashList{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+#hash #hashList button{
+    font-size: 24px;
+}
 #suggItem ul{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 20px;
 }
 #suggItem li{
-    width: 503px;
+    width: 400px;
 }
 #suggItem li img{
     width: 100%;
-    height: 694px;
+    height: 650px;
     margin-bottom: 7px;
 }
 #suggItem li .name{
@@ -158,14 +176,15 @@
 }
 #productItem ul{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 20px;
 }
 #productItem li{
-    width: 503px;
+    width: 400px;
 }
 #productItem li img{
     width: 100%;
-    height: 694px;
+    height: 650px;
     margin-bottom: 7px;
 }
 #productItem li .name{
@@ -186,7 +205,7 @@
 
 /* sns 사진 */
 #snsImgList{
-    width: 1900px;
+    width: 1594px;
     margin: 0 auto;
     margin-bottom: 160px;
 }
@@ -198,14 +217,12 @@
 #imgList ul{
     display: flex;
     flex-wrap: wrap;
-    gap: 6.5px;
+    gap: 6px;
 }
 #imgList li{
-    width: 470px;
-    background-color: antiquewhite;
+    width: 394px;
 }
 #imgList li img{
     width: 100%;
     height: 470px;
-    background-color: #fff;
 }
