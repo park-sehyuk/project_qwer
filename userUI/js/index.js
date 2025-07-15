@@ -278,6 +278,7 @@ let sliderIndex = 0;
         // 베스트 아이템 리스트
         bestItemList.forEach(item => {
             const cloneLi = items.content.firstElementChild.cloneNode(true);
+            cloneLi.querySelector('a').href = 'production/detail.html?id=' + item.id;
             cloneLi.querySelector('img').src = item.src;
             cloneLi.querySelector('.title').textContent = item.title;
             cloneLi.querySelector('.price').textContent = `가격: ${item.price}원`;
