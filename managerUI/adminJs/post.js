@@ -1,66 +1,61 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const editButtons = document.querySelectorAll('.edit-btn');
-    const deleteButtons = document.querySelectorAll('.delete-btn');
-
-    editButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            const categoryId = this.dataset.id;
-            const row = this.closest('tr');
-            const categoryNameCell = row.children[1];
-
-            const currentCategoryName = categoryNameCell.textContent;
-            const inputField = document.createElement('input');
-            inputField.type = 'text';
-            inputField.value = currentCategoryName;
-            inputField.className = 'edit-input';
-
-            categoryNameCell.innerHTML = '';
-            categoryNameCell.appendChild(inputField);
-
-            inputField.focus();
-
-            inputField.addEventListener('keypress', function(e) {
-                if (e.key === 'Enter') {
-                    const newCategoryName = inputField.value;
-                    if (newCategoryName.trim() === '') {
-                        alert('카테고리 이름을 입력해주세요.');
-                        inputField.focus();
-                        return;
-                    }
-                    console.log(`카테고리 ID: ${categoryId}, 새 이름: ${newCategoryName}`);
-                    categoryNameCell.textContent = newCategoryName;
-                }
-            });
-
-            inputField.addEventListener('blur', function() {
-                if (categoryNameCell.querySelector('.edit-input')) {
-                    categoryNameCell.textContent = currentCategoryName;
-                }
-            });
-
-            alert(`${categoryId}번 카테고리 수정 버튼 클릭!`);
-        });
-    });
-
-    deleteButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            const categoryId = this.dataset.id;
-            const rowToDelete = this.closest('tr');
-
-            if (confirm(`${categoryId}번 카테고리를 정말 삭제하시겠습니까?`)) {
-                alert(`${categoryId}번 카테고리 삭제 진행!`);
-                rowToDelete.remove();
-            } else {
-                alert('삭제를 취소했습니다.');
-            }
-        });
-    });
-
     const searchInput = document.querySelector('.category-search-input');
     const searchButton = document.querySelector('.search');
     const resetButton = document.querySelector('.starline');
     const tableBody = document.querySelector('.category-data-table tbody');
-    const allTableRows = Array.from(tableBody.querySelectorAll('tr'));
+
+    const initialRawTableRows = Array.from(tableBody.querySelectorAll('tr'));
+
+    tableBody.addEventListener('click', function(event) {
+        if (event.target.classList.contains('edit-btn')) {
+            const button = event.target;
+            const itemId = button.dataset.id;
+            const row = button.closest('tr');
+            const titleCell = row.children[1];
+
+            const currentTitle = titleCell.textContent;
+            const inputField = document.createElement('input');
+            inputField.type = 'text';
+            inputField.value = currentTitle;
+            inputField.className = 'edit-input';
+
+            titleCell.innerHTML = '';
+            titleCell.appendChild(inputField);
+            inputField.focus();
+
+            inputField.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    const newTitle = inputField.value;
+                    if (newTitle.trim() === '') {
+                        alert('제목을 입력해주세요.');
+                        inputField.focus();
+                        return;
+                    }
+                    console.log(`ID: ${itemId}, 새 제목: ${newTitle}`);
+                    titleCell.textContent = newTitle;
+                }
+            });
+
+            inputField.addEventListener('blur', function() {
+                if (titleCell.querySelector('.edit-input')) {
+                    titleCell.textContent = currentTitle;
+                }
+            });
+        }
+
+        if (event.target.classList.contains('delete-btn')) {
+            const button = event.target;
+            const itemId = button.dataset.id;
+            const rowToDelete = button.closest('tr');
+
+            if (confirm(`${itemId}번 게시물을 정말 삭제하시겠습니까?`)) {
+                alert(`${itemId}번 게시물 삭제 진행!`);
+                rowToDelete.remove();
+            } else {
+                alert('삭제를 취소했습니다.');
+            }
+        }
+    });
 
     if (searchButton && searchInput && tableBody) {
         searchButton.addEventListener('click', function() {
@@ -76,7 +71,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (resetButton) {
             resetButton.addEventListener('click', function() {
                 searchInput.value = '';
-                displayRows(allTableRows);
+                displayRows(initialRawTableRows);
             });
         }
     }
@@ -85,9 +80,9 @@ document.addEventListener('DOMContentLoaded', function() {
         const searchTerm = searchInput.value.toLowerCase().trim();
         const filteredRows = [];
 
-        allTableRows.forEach(row => {
-            const categoryName = row.children[1].textContent.toLowerCase();
-            if (categoryName.includes(searchTerm)) {
+        initialRawTableRows.forEach(row => {
+            const postTitle = row.children[1].textContent.toLowerCase();
+            if (postTitle.includes(searchTerm)) {
                 filteredRows.push(row);
             }
         });
@@ -96,20 +91,41 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function displayRows(rowsToDisplay) {
+        const minRows = 10;
+        const totalColumns = 5;
+
         tableBody.innerHTML = '';
+
         if (rowsToDisplay.length > 0) {
             rowsToDisplay.forEach(row => {
+                row.classList.remove('no-results-row', 'empty-dummy-row');
                 tableBody.appendChild(row);
             });
         } else {
             const noResultsRow = document.createElement('tr');
+            noResultsRow.classList.add('no-results-row');
             const noResultsCell = document.createElement('td');
-            noResultsCell.colSpan = 5;
+            noResultsCell.colSpan = totalColumns;
             noResultsCell.textContent = '검색 결과가 없습니다.';
             noResultsCell.style.textAlign = 'center';
             noResultsCell.style.padding = '20px';
             noResultsRow.appendChild(noResultsCell);
             tableBody.appendChild(noResultsRow);
+        }
+
+        const currentDisplayedRows = tableBody.querySelectorAll('tr').length;
+        if (currentDisplayedRows < minRows) {
+            const rowsToAdd = minRows - currentDisplayedRows;
+            for (let i = 0; i < rowsToAdd; i++) {
+                const emptyRow = document.createElement('tr');
+                emptyRow.classList.add('empty-dummy-row');
+                for (let j = 0; j < totalColumns; j++) {
+                    const emptyCell = document.createElement('td');
+                    emptyCell.innerHTML = '&nbsp;';
+                    emptyRow.appendChild(emptyCell);
+                }
+                tableBody.appendChild(emptyRow);
+            }
         }
     }
 });
