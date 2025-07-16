@@ -1,142 +1,101 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>QWER</title>
-    <link rel="stylesheet" href="css/base.css">
-    <link rel="stylesheet" href="css/commen.css">
-    <link rel="stylesheet" href="css/main.css">
-</head>
-<body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/commen.css" />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
     <div id="wrapper">
-        <!-- 메인 슬라이더 -->
-        <div id="mainslider">
-            <div id="slider"><img src="img/slider01.jpeg" alt="발렌시아가 웨이브로고 후드"></div>
-            <div id="sliderController">
-                <div id="sliderPager">
-                    <ul>
-                        <li class="active"><button><span>1</span></button></li>
-                        <li><button><span>2</span></button></li>
-                        <li><button><span>3</span></button></li>
-                        <li><button><span>4</span></button></li>                         
-                    </ul>
-                </div>
-                <p class="prew"><button>이전</button></p>
-                <p class="next"><button>다음</button></p>
-            </div>
+
+      <div id="header"></div>
+      <!-- 메인 슬라이더 -->
+      <div id="mainslider">
+        <div id="slider"><img src="" alt="" id="sliderImg" /></div>
+        <div id="sliderController">
+          <div id="sliderPager">
+            <ul>
+              <li class="active">
+                <button><span>1</span></button>
+              </li>
+              <li>
+                <button><span>2</span></button>
+              </li>
+              <li>
+                <button><span>3</span></button>
+              </li>
+              <li>
+                <button><span>4</span></button>
+              </li>
+            </ul>
+          </div>
+          <p class="prew"><button id="prewBtn">이전</button></p>
+          <p class="next"><button id="nextBtn">다음</button></p>
         </div>
-        <!-- best 상품 리스트 -->
-        <div id="bestList">
-            <h1>BEST</h1>
-            <div id="bestItem">
-                <ul>
-                    <li>
-                        <a href="">
-                            <img src="img/구찌반팔.jpeg" alt="">
-                            <p class="name">상품명1</p>
-                            <p class="price">가격: 10,000원</p>
-                            <p class="content">시원해요~~</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <img src="img/구찌반팔.jpeg" alt="">
-                            <p class="name">상품명1</p>
-                            <p class="price">가격: 10,000원</p>
-                            <p class="content">시원해요~~</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <img src="img/구찌반팔.jpeg" alt="">
-                            <p class="name">상품명1</p>
-                            <p class="price">가격: 10,000원</p>
-                            <p class="content">시원해요~~</p>
-                        </a>
-                    </li>
-                </ul>
-            </div>
+      </div>
+      <!-- best 상품 리스트 -->
+      <div id="bestList">
+        <h1>BEST</h1>
+        <div id="bestItem">
+          <ul id="bestItemList"></ul>
         </div>
-        <!-- 추천 상품 -->
-        <div id="suggList">
-            <h1>추천 상품</h1>
-            <div id="suggItem">
-                <ul>
-                    <li>
-                        <a href="">
-                            <img src="img/구찌반팔.jpeg" alt="">
-                            <p class="name">상품명1</p>
-                            <p class="price">가격: 10,000원</p>
-                            <p class="content">시원해요~~</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <img src="img/구찌반팔.jpeg" alt="">
-                            <p class="name">상품명1</p>
-                            <p class="price">가격: 10,000원</p>
-                            <p class="content">시원해요~~</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <img src="img/구찌반팔.jpeg" alt="">
-                            <p class="name">상품명1</p>
-                            <p class="price">가격: 10,000원</p>
-                            <p class="content">시원해요~~</p>
-                        </a>
-                    </li>
-                </ul>
-            </div>
+      </div>
+      <!-- 추천 상품 -->
+      <div id="suggList">
+        <h1>추천 상품</h1>
+        <div id="hash">
+          <ul id="hashList">
+            <li><button id="gucciBtn">#구찌</button></li>
+            <li><button id="poloBtn">#랄프로렌</button></li>
+            <li><button id="maisonBtn">#메종 키츠네</button></li>
+            <li><button id="balBtn">#발렌시아가</button></li>
+          </ul>
         </div>
-        <!-- 이달의 상품 -->
-        <div id="productList">
-            <h1>이달의 상품</h1>
-            <div id="productItem">
-                <ul>
-                    <li>
-                        <a href="">
-                            <img src="img/구찌반팔.jpeg" alt="">
-                            <p class="name">상품명1</p>
-                            <p class="price">가격: 10,000원</p>
-                            <p class="content">시원해요~~</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <img src="img/구찌반팔.jpeg" alt="">
-                            <p class="name">상품명1</p>
-                            <p class="price">가격: 10,000원</p>
-                            <p class="content">시원해요~~</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <img src="img/구찌반팔.jpeg" alt="">
-                            <p class="name">상품명1</p>
-                            <p class="price">가격: 10,000원</p>
-                            <p class="content">시원해요~~</p>
-                        </a>
-                    </li>
-                </ul>
-            </div>
+        <div id="suggItem">
+          <ul id="suggItemList"></ul>
         </div>
-        <!-- sns -->
-        <div id="snsImgList">
-            <h1>sns</h1>
-            <div id="imgList">
-                <ul>
-                    <li><img src="img/구찌반팔.jpeg" alt=""></li>
-                    <li><img src="img/구찌반팔.jpeg" alt=""></li>
-                    <li><img src="img/구찌반팔.jpeg" alt=""></li>
-                    <li><img src="img/구찌반팔.jpeg" alt=""></li>
-                    <li><img src="img/구찌반팔.jpeg" alt=""></li>
-                    <li><img src="img/구찌반팔.jpeg" alt=""></li>
-                    <li><img src="img/구찌반팔.jpeg" alt=""></li>
-                    <li><img src="img/구찌반팔.jpeg" alt=""></li>
-                </ul>
-            </div>
+      </div>
+      <!-- 이달의 상품 -->
+      <div id="productList">
+        <h1>이달의 상품</h1>
+        <div id="productItem">
+          <ul id="productItemList"></ul>
         </div>
+      </div>
+      <!-- sns -->
+      <div id="snsImgList">
+        <h1>sns</h1>
+        <div id="imgList">
+          <ul>
+            <li><img src="img/sns1.jpg" alt="" /></li>
+            <li><img src="img/sns2.png" alt="" /></li>
+            <li><img src="img/sns3.jpeg" alt="" /></li>
+            <li><img src="img/sns4.jpeg" alt="" /></li>
+            <li><img src="img/sns5.avif" alt="" /></li>
+            <li><img src="img/sns6.jpg" alt="" /></li>
+            <li><img src="img/sns7.avif" alt="" /></li>
+            <li><img src="img/sns8.jpg" alt="" /></li>
+          </ul>
+        </div>
+      </div>
+      <footer id="footer"></footer>
     </div>
-</body>
+
+    <template id="items">
+      <li>
+        <a href="">
+          <img src="" alt="" />
+          <p class="title"></p>
+          <p class="price"></p>
+          <p class="content"></p>
+        </a>
+      </li>
+    </template>
+    <script src="js/index.js"></script>
+    <script src="js/common.js"></script>
+  </body>
+</html>
