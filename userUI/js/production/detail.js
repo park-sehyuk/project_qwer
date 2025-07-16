@@ -1,3 +1,4 @@
+
 document.addEventListener('DOMContentLoaded', function () {
     const productData = [
         {
@@ -421,7 +422,6 @@ document.addEventListener('DOMContentLoaded', function () {
             rightSideEl.innerHTML = '<h2>잘못된 접근입니다.</h2><p>표시할 상품 정보가 지정되지 않았습니다.</p>';
         }
     }
-
     const sizeBar = document.querySelector('.size-Bar');
     const sizeOptions = document.querySelector('.size-options');
     const sizeText = document.querySelector('.sizeText');
@@ -439,10 +439,12 @@ document.addEventListener('DOMContentLoaded', function () {
         sizeButtons.forEach(button => {
             button.addEventListener('click', function (event) {
                 event.stopPropagation();
+
                 const currentSelected = document.querySelector('.size-options ul li button.selected');
                 if (currentSelected) {
                     currentSelected.classList.remove('selected');
                 }
+
                 this.classList.add('selected');
                 sizeText.textContent = this.dataset.size;
                 sizeOptions.style.display = 'none';
@@ -456,4 +458,3 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     }
-});

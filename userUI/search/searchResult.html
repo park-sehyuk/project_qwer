@@ -9,32 +9,191 @@
   </head>
   <body>
     <div class="container">
-
-        <h1>"<span id="searchResult">000</span>" 검색 결과입니다.</h1>
-
-        <div class="filter-bar">
-            <div class="item-count">
-                <span id="total-items">0 Item</span>
-            </div>
-            <div class="sort-container">
-                <button class="sort-button">
-                    <span id="sort-text">정렬 기준</span>
-                    <span class="arrow">▼</span>
-                </button>
-                <div class="sort-dropdown">
-                    <a href="#" data-sort="popular">인기순</a>
-                    <a href="#" data-sort="price_desc">높은가격순</a>
-                    <a href="#" data-sort="price_asc">낮은가격순</a>
-                </div>
-            </div>
+      <main class="main-content">
+        <div id="banner">
+          <h1 id="searchResultPage">'OOO'검색 결과</h1>
+        </div>
+        <div class="toolbar">
+          <span class="item-count">80 Items</span>
+          <div class="sort-container">
+            <select name="sort" id="sort-select">
+              <option value="popular">정렬</option>
+              <option value="popular">인기순</option>
+              <option value="price-low">낮은가격순</option>
+              <option value="price-high">높은가격순</option>
+            </select>
+          </div>
         </div>
 
-        <main id="product-grid" class="product-grid"></main>
+        <div class="product-grid">
+          <div class="product-card">
+            <div class="product-image">
+              <p>이미지</p>
+              <button class="favorite-btn">
+                <i class="fa-regular fa-heart"></i>
+              </button>
+            </div>
+            <div class="product-info">
+              <h3 class="product-title">상품제목</h3>
+              <p class="product-description">설명</p>
+              <p class="product-price">가격</p>
+            </div>
+          </div>
 
-        <nav class="pagination-container">
-            <ul id="pagination" class="pagination"></ul>
-        </nav>
-    </div>
+          <div class="product-card2">
+            <div class="product-image">
+              <p>이미지</p>
+              <button class="favorite-btn">
+                <i class="fa-solid fa-heart" style="color: #ff4757"></i>
+              </button>
+            </div>
+            <div class="product-info">
+              <h3 class="product-title">상품제목</h3>
+              <p class="product-description">설명</p>
+              <p class="product-price">가격</p>
+            </div>
+          </div>
+
+          <div class="product-card3">
+            <div class="product-image">
+              <p>이미지</p>
+              <button class="favorite-btn">
+                <i class="fa-regular fa-heart"></i>
+              </button>
+            </div>
+            <div class="product-info">
+              <h3 class="product-title">상품제목</h3>
+              <p class="product-description">설명</p>
+              <p class="product-price">가격</p>
+            </div>
+          </div>
+
+          <div class="product-card4">
+            <div class="product-image">
+              <p>이미지</p>
+              <button class="favorite-btn">
+                <i class="fa-regular fa-heart"></i>
+              </button>
+            </div>
+            <div class="product-info">
+              <h3 class="product-title">상품제목</h3>
+              <p class="product-description">설명</p>
+              <p class="product-price">가격</p>
+            </div>
+          </div>
+
+          <div class="product-card5">
+            <div class="product-image">
+              <p>이미지</p>
+              <button class="favorite-btn">
+                <i class="fa-regular fa-heart"></i>
+              </button>
+            </div>
+            <div class="product-info">
+              <h3 class="product-title">상품제목</h3>
+              <p class="product-description">설명</p>
+              <p class="product-price">가격</p>
+            </div>
+          </div>
+
+          <div class="product-card6">
+            <div class="product-image">
+              <p>이미지</p>
+              <button class="favorite-btn">
+                <i class="fa-regular fa-heart"></i>
+              </button>
+            </div>
+            <div class="product-info">
+              <h3 class="product-title">상품제목</h3>
+              <p class="product-description">설명</p>
+              <p class="product-price">가격</p>
+            </div>
+          </div>
+
+          <div class="product-card7">
+            <div class="product-image">
+              <p>이미지</p>
+              <button class="favorite-btn">
+                <i class="fa-regular fa-heart"></i>
+              </button>
+            </div>
+            <div class="product-info">
+              <h3 class="product-title">상품제목</h3>
+              <p class="product-description">설명</p>
+              <p class="product-price">가격</p>
+            </div>
+          </div>
+
+          <div class="product-card8">
+            <div class="product-image">
+              <p>이미지</p>
+              <button class="favorite-btn">
+                <i class="fa-regular fa-heart"></i>
+              </button>
+            </div>
+            <div class="product-info">
+              <h3 class="product-title">상품제목</h3>
+              <p class="product-description">설명</p>
+              <p class="product-price">가격</p>
+            </div>
+          </div>
+
+          <div class="product-card9">
+            <div class="product-image">
+              <p>이미지</p>
+              <button class="favorite-btn">
+                <i class="fa-regular fa-heart"></i>
+              </button>
+            </div>
+            <div class="product-info">
+              <h3 class="product-title">상품제목</h3>
+              <p class="product-description">설명</p>
+              <p class="product-price">가격</p>
+            </div>
+          </div>
+
+          <div class="product-card10">
+            <div class="product-image">
+              <p>이미지</p>
+              <button class="favorite-btn">
+                <i class="fa-regular fa-heart"></i>
+              </button>
+            </div>
+            <div class="product-info">
+              <h3 class="product-title">상품제목</h3>
+              <p class="product-description">설명</p>
+              <p class="product-price">가격</p>
+            </div>
+          </div>
+
+          <div class="product-card11">
+            <div class="product-image">
+              <p>이미지</p>
+              <button class="favorite-btn">
+                <i class="fa-regular fa-heart"></i>
+              </button>
+            </div>
+            <div class="product-info">
+              <h3 class="product-title">상품제목</h3>
+              <p class="product-description">설명</p>
+              <p class="product-price">가격</p>
+            </div>
+          </div>
+
+          <div class="product-card12">
+            <div class="product-image">
+              <p>이미지</p>
+              <button class="favorite-btn">
+                <i class="fa-regular fa-heart"></i>
+              </button>
+            </div>
+            <div class="product-info">
+              <h3 class="product-title">상품제목</h3>
+              <p class="product-description">설명</p>
+              <p class="product-price">가격</p>
+            </div>
+          </div>
+        </div>
 
         <div class="pagination">
           <ul>
@@ -51,8 +210,5 @@
         </div>
       </main>
     </div>
-
-    <script src="../js/search/searchResult.js"></script>
-</body>
+  </body>
 </html>
-

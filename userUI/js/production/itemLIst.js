@@ -1,3 +1,4 @@
+
 document.addEventListener('DOMContentLoaded', () => {
 
     const initialProductData = [{
@@ -264,3 +265,4 @@ document.addEventListener('DOMContentLoaded', () => {
     setupEventListeners();
     render();
 });
+
