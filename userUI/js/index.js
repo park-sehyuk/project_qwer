@@ -1,3 +1,4 @@
+
 // 슬라이더 이미지 배열
 let sliderImgs = ['img/sliderImg1.png', 'img/gucciSlider.jpg', 'img/sliderImg3.jpg', 'img/sliderImg4.jpg'];
 
@@ -474,3 +475,4 @@ enableDragScroll(bestItem);
 
 
 loadItems();
+

@@ -1,3 +1,4 @@
+
 $(function () {
   if (
     window.location.pathname.includes("/search/") ||
@@ -6,6 +7,7 @@ $(function () {
   ) {
     headerPath = "../include/header.html";
     footerPath = "../include/footer.html";
+
   } else {
     headerPath = "include/header.html";
     footerPath = "include/footer.html";
@@ -69,6 +71,7 @@ $(function () {
   });
 });
 
+
 // const productData = [
 //   {
 //     imageUrl: "../img/printcottongucci.PNG",
@@ -83,3 +86,4 @@ $(function () {
 //       "새로운 시즌을 맞아 진화를 거듭하는 구찌의 하우스 코드와 저지 소재의 만남. 구찌 웹(Web) 배너 프린트가 돋보이는 레귤러 핏 코튼 저지 티셔츠.",
 //   },
 // ];
+
