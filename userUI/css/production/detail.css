@@ -20,7 +20,8 @@
     height: 900px;
     background-size: 100% auto;
     background-repeat: no-repeat;
-    background-image: url(/userUI/img/옷\ 이미지.jpg);
+    /* 초기 이미지는 JavaScript에서 동적으로 설정됩니다. */
+    /* background-image: url(/userUI/img/옷\ 이미지.jpg); */ 
 }
 
 .right-Side {
@@ -110,57 +111,43 @@
 
 .right-Side .color {
     display: flex;
-    gap: 50px;
+    /* gap: 50px; 제거하고 각 .color-option에 margin-right 부여 */
     margin-bottom: 30px;
+    /* flex-wrap: wrap; 여러 색상이 한 줄에 다 안 들어갈 경우를 대비하여 추가 */
+    flex-wrap: wrap; 
 }
 
 .right-Side .color-text {
     font-size: 20px;
     font-weight: bolder;
-    margin-left: 121px;
+    /* margin-left: 121px; 이 값을 제거하여 flex 컨테이너에 맞게 정렬될 수 있도록 함 */
     margin-bottom: 20px;
 }
 
-.right-Side .color .red {
-    width: 60px;
+/* JavaScript에서 동적으로 생성되는 .color-option 버튼 스타일 */
+.right-Side .color .color-option {
+    width: 60px; /* 기존 red, blue, black과 동일한 크기 */
     height: 60px;
-    border-radius: 10px;
-    background-color: red;
+    border-radius: 10px; /* 기존과 동일하게 사각형으로 */
+    border: 1px solid #ccc; /* 기본 테두리 */
+    margin-right: 20px; /* 버튼 간격 조정 */
+    margin-bottom: 10px; /* 여러 줄로 표시될 때 하단 여백 */
+    cursor: pointer;
+    outline: none; /* 클릭 시 외곽선 제거 */
+    display: block; /* 각 색상 버튼을 블록 요소로 변경하여 새 줄에 표시 (필요시 inline-block으로 변경) */
+    /* display: inline-block; */ /* 만약 한 줄에 여러 개 표시하고 싶다면 이 값을 사용하세요 */
 }
 
-.right-Side .color .blue {
-    width: 60px;
-    height: 60px;
-    border-radius: 10px;
-    background-color: blue;
+/* 선택된 색상 버튼에 대한 스타일 */
+.right-Side .color .color-option.selected {
+    border: 2px solid #000; /* 선택된 색상에 대한 강조 테두리 */
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.2); /* 선택 효과 */
 }
 
-.right-Side .color .Black {
-    width: 60px;
-    height: 60px;
-    border-radius: 10px;
-    background-color: yellow;
-}
+/* 기존 하드코딩된 색상 버튼 관련 CSS는 삭제 (red, blue, Black 클래스) */
+/* .right-Side .color .red, .blue, .Black { ... } */
+/* .color .red::after, .blue::after { ... } */
 
-.color .red::after {
-    content: "";
-    display: block;
-    width: 1px;
-    height: 30px;
-    background-color: #000000;
-    margin-left: 84px;
-    margin-bottom: 2px;
-}
-
-.color .blue::after {
-    content: "";
-    display: block;
-    width: 1px;
-    height: 30px;
-    background-color: #000000;
-    margin-left: 84px;
-    margin-bottom: 2px;
-}
 
 .Buy-Cart {
     display: flex;
@@ -197,7 +184,7 @@
 .cloth {
     display: flex;
     gap: 10px;
-    width: 640px;
+    /* width: 640px; 동적으로 계산될 수 있도록 제거 */
     transition: transform 0.5s ease-in-out;
 }
 
