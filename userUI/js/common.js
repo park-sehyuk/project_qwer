@@ -1,6 +1,5 @@
 $(function () {
-  $("#header").load("../include/header.html", function () {
-    console.log(document.getElementById("searchBtn"));
+  $("#header").load("include/header.html", function () {
     // 헤더가 로드된 후에 실행할 코드
     const searchBtn = document.getElementById("searchBtn");
     const searchResultDiv = document.getElementById("searchResult");
