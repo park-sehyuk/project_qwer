@@ -107,7 +107,7 @@ function emailFormat() {
     return true;
   }
   const fullEmail = emailId + '@' + emailDomain;
-  const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+  const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{3,6}$/;
 
   if (!emailRegex.test(fullEmail)) {
     alert('올바른 이메일 주소 형식이 아닙니다. 다시 확인해주세요.');
