@@ -1,223 +1,156 @@
 @charset "UTF-8";
-#main-wrapper{
-    min-width: 1350px;
-}
-#mainslider{
-    position: relative;
-    width: 100%;
-    margin: 0 auto;
-    margin-bottom: 160px;
-}
-#mainslider #slider img{
-    width: 100%;
-    height: 880px;
-   margin-top: 50px;
-   margin-left: auto;
-   margin-right: auto;
-}
-#slliderController{
-    position: relative;
-}
-/* 메인 슬라이드 페이징 */
-#sliderController #sliderPager{
-    position: absolute;
-    bottom: 80px;
-    left: 50%;
-    right: 50%;
-}
-#sliderController #sliderPager ul{
-    display: flex;
-    justify-content: center;
-}
-#sliderController #sliderPager li{
-    width: 9px;
-    height: 9px;
-    margin: 0 20px;
-}
-#sliderController #sliderPager li button{
-    width: 18px;
-    height: 18px;
-    background-color: #fff;
-    border-radius: 50%;
-    text-indent: -99999px;
-}
-#sliderController #sliderPager .active button{
-    background-color: #ddd;
-}
-
-/* 메인 슬라이더 이전/다음 버튼 */
-#sliderController .prew{
-    position: absolute;
-    top: 50%;
-    left: 60px;
-}
-#sliderController .prew button{
-    width: 19px;
-    height: 37px;
-    text-indent: -99999px;
-    background-image: url('../img/prev.png');
-}
-#sliderController .next{
-    position: absolute;
-    top: 50%;
-    right: 60px;
-}
-#sliderController .next button{
-    width: 19px;
-    height: 37px;
-    text-indent: -99999px;
-    transform: rotate(180deg);
-    background-image: url('../img/prev.png');
+#mainslider {
+  width: 1470px;
+  margin: 0 auto;
+  margin-bottom: 160px;
 }
 
 /* best 아이템 */
-#bestList{
-    width: 1594px;
-    margin: 0 auto;
-    margin-bottom: 160px;
-    overflow: hidden;
+#bestList {
+  width: 1440px;
+  margin: 0 auto;
+  margin-bottom: 160px;
+  overflow: hidden;
 }
-#bestList h1{
-    text-align: center;
-    font-size: 36px;
-    margin-bottom: 42px;
+#bestList h1 {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 42px;
 }
-#bestItem ul{
-    display: flex;
-    justify-content: space-between;
-    gap: 30px;
-    width: 2404px;
+
+#bestItem #bestItemList {
+  width: 1440px;
 }
-#bestItem li{
-    width: 503px;
+#bestItem #bestItemList .item {
+  padding: 0 10px;
+  box-sizing: border-box;
 }
-#bestItem li img{
-    width: 100%;
-    height: 694px;
-    margin-bottom: 7px;
+#bestItem #bestItemList img {
+  width: 100%;
+  height: 694px;
+  margin-bottom: 7px;
 }
-#bestItem li .name{
-    font-size: 17px;
-    margin-bottom: 4px;
-    color: #565656;
+#bestItem #bestItemList .title {
+  font-size: 17px;
+  margin-bottom: 4px;
+  color: #565656;
 }
-#bestItem li .price{
-    font-size: 15px;
-    color: #000;
-    padding-right: 10px;
+#bestItem li .price {
+  font-size: 15px;
+  color: #000;
+  padding-right: 10px;
 }
-#bestItem li .content{
-    font-size: 14px;
-    color: #565656;
-    margin-bottom: 3px;
+#bestItem li .content {
+  font-size: 14px;
+  color: #565656;
+  margin-bottom: 3px;
 }
 
 /* 추천 상품 아이템 */
-#suggList{
-    width: 1594px;
-    margin: 0 auto;
-    margin-bottom: 160px;
+#suggList {
+  width: 1440px;
+  margin: 0 auto;
+  margin-bottom: 160px;
 }
-#suggList h1{
-    text-align: center;
-    font-size: 36px;
-    margin-bottom: 42px;
+#suggList h1 {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 42px;
 }
-#suggItem ul{
-    display: flex;
-    gap: 20px;
+#suggItem #suggItemList {
+  display: flex;
+  gap: 20px;
 }
-#suggItem li{
-    width: 503px;
+#suggItem #suggItemList .item {
+  width: 503px;
 }
-#suggItem li img{
-    width: 100%;
-    height: 694px;
-    margin-bottom: 7px;
+#suggItem img {
+  width: 100%;
+  height: 694px;
+  margin-bottom: 7px;
 }
-#suggItem li .name{
-    font-size: 17px;
-    margin-bottom: 4px;
-    color: #565656;
+#suggItem .title {
+  font-size: 17px;
+  margin-bottom: 4px;
+  color: #565656;
 }
-#suggItem li .price{
-    font-size: 15px;
-    color: #000;
-    padding-right: 10px;
+#suggItem .price {
+  font-size: 15px;
+  color: #000;
+  padding-right: 10px;
 }
-#suggItem li .content{
-    font-size: 14px;
-    color: #565656;
-    margin-bottom: 3px;
+#suggItem .content {
+  font-size: 14px;
+  color: #565656;
+  margin-bottom: 3px;
 }
-#hashList{
-    display: flex;
-    justify-content: center;
-    gap: 70px;
-    margin-bottom: 20px;
+#hashList {
+  display: flex;
+  justify-content: center;
+  gap: 70px;
+  margin-bottom: 20px;
+}
+#hashList button {
+  font-size: 28px;
 }
 
 /* 이달의 상품 */
-#productList{
-    width: 1594px;
-    margin: 0 auto;
-    margin-bottom: 160px;
+#productList {
+  width: 1440px;
+  margin: 0 auto;
+  margin-bottom: 160px;
 }
-#productList h1{
-    text-align: center;
-    font-size: 36px;
-    margin-bottom: 42px;
+#productList h1 {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 42px;
 }
-#productItem ul{
-    display: flex;
-    justify-content: space-between;
+#productItem #productItemList {
+  display: flex;
+  gap: 20px;
 }
-#productItem li{
-    width: 503px;
+#productItem .item {
+  width: 503px;
 }
-#productItem li img{
-    width: 100%;
-    height: 694px;
-    margin-bottom: 7px;
+#productItem img {
+  width: 100%;
+  height: 694px;
+  margin-bottom: 7px;
 }
-#productItem li .name{
-    font-size: 17px;
-    margin-bottom: 4px;
-    color: #565656;
+#productItem .title {
+  font-size: 17px;
+  margin-bottom: 4px;
+  color: #565656;
 }
-#productItem li .price{
-    font-size: 15px;
-    color: #000;
-    padding-right: 10px;
+#productItem .price {
+  font-size: 15px;
+  color: #000;
+  padding-right: 10px;
 }
-#productItem li .content{
-    font-size: 14px;
-    color: #565656;
-    margin-bottom: 3px;
+#productItem .content {
+  font-size: 14px;
+  color: #565656;
+  margin-bottom: 3px;
 }
 
 /* sns 사진 */
-#snsImgList{
-    width: 1900px;
-    margin: 0 auto;
-    margin-bottom: 160px;
+#snsImgList {
+  width: 1440px;
+  margin: 0 auto;
+  margin-bottom: 160px;
 }
-#snsImgList h1{
-    text-align: end;
-    font-size: 36px;
-    margin-bottom: 42px;
+#snsImgList h1 {
+  text-align: end;
+  font-size: 36px;
+  margin-bottom: 42px;
 }
-#imgList ul{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6.5px;
+#imgList ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6.5px;
 }
-#imgList li{
-    width: 470px;
-    background-color: antiquewhite;
-}
-#imgList li img{
-    width: 100%;
-    height: 470px;
-    background-color: #fff;
+
+#imgList li img {
+  width: 350px;
+  height: 470px;
 }
