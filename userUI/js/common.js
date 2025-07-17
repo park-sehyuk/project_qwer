@@ -1,4 +1,3 @@
-
 $(function () {
   if (
     window.location.pathname.includes("/search/") ||
@@ -7,7 +6,6 @@ $(function () {
   ) {
     headerPath = "../include/header.html";
     footerPath = "../include/footer.html";
-
   } else {
     headerPath = "include/header.html";
     footerPath = "include/footer.html";
@@ -15,8 +13,23 @@ $(function () {
 
   $("#header").load(headerPath, function () {
     // 헤더가 로드된 후에 실행할 코드
+    const title = document.getElementById("title");
     const searchBtn = document.getElementById("searchBtn");
     const searchResultDiv = document.getElementById("searchResult");
+
+    function main() {
+      if (
+        window.location.pathname.includes("/search/") ||
+        window.location.pathname.includes("/userLog/") ||
+        window.location.pathname.includes("/production/")
+      ) {
+        indexPath = "../index.html";
+      } else {
+        indexPath = "index.html";
+      }
+      title.href = indexPath;
+    }
+    main();
 
     searchBtn.addEventListener("click", function () {
       if (searchResultDiv.style.display === "none") {
@@ -71,7 +84,6 @@ $(function () {
   });
 });
 
-
 // const productData = [
 //   {
 //     imageUrl: "../img/printcottongucci.PNG",
@@ -86,4 +98,3 @@ $(function () {
 //       "새로운 시즌을 맞아 진화를 거듭하는 구찌의 하우스 코드와 저지 소재의 만남. 구찌 웹(Web) 배너 프린트가 돋보이는 레귤러 핏 코튼 저지 티셔츠.",
 //   },
 // ];
-
