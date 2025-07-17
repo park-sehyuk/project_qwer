@@ -4,7 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>QWER</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script
+      type="text/javascript"
+      src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
     <link rel="stylesheet" href="css/base.css" />
     <link rel="stylesheet" href="css/commen.css" />
     <link rel="stylesheet" href="css/main.css" />
@@ -12,35 +21,19 @@
   <body>
     <div id="header"></div>
     <div id="main-wrapper">
- <!-- 메인 슬라이더 -->
+      <!-- 메인 슬라이더 -->
       <div id="mainslider">
-        <div id="slider"><img src="" alt="" id="sliderImg" /></div>
-        <div id="sliderController">
-          <div id="sliderPager">
-            <ul>
-              <li class="active">
-                <button><span>1</span></button>
-              </li>
-              <li>
-                <button><span>2</span></button>
-              </li>
-              <li>
-                <button><span>3</span></button>
-              </li>
-              <li>
-                <button><span>4</span></button>
-              </li>
-            </ul>
-          </div>
-          <p class="prew"><button id="prewBtn">이전</button></p>
-          <p class="next"><button id="nextBtn"></button></p>
+        <div class="slick-slider">
+          <div class="sliderImg"><img src="img/han1.jpg" alt="" /></div>
+          <div class="sliderImg"><img src="img/han2.jpg" alt="" /></div>
+          <div class="sliderImg"><img src="img/han3.jpg" alt="" /></div>
         </div>
       </div>
       <!-- best 상품 리스트 -->
       <div id="bestList">
         <h1>BEST</h1>
         <div id="bestItem">
-          <ul id="bestItemList"></ul>
+          <div id="bestItemList"></div>
         </div>
       </div>
       <!-- 추천 상품 -->
@@ -55,14 +48,14 @@
           </ul>
         </div>
         <div id="suggItem">
-          <ul id="suggItemList"></ul>
+          <div id="suggItemList"></div>
         </div>
       </div>
       <!-- 이달의 상품 -->
       <div id="productList">
         <h1>이달의 상품</h1>
         <div id="productItem">
-          <ul id="productItemList"></ul>
+          <div id="productItemList"></div>
         </div>
       </div>
       <!-- sns -->
@@ -81,19 +74,18 @@
           </ul>
         </div>
       </div>
-     
     </div>
-     <footer id="footer"></footer>
+    <footer id="footer"></footer>
 
     <template id="items">
-      <li>
+      <div class="item">
         <a href="">
           <img src="" alt="" />
           <p class="title"></p>
           <p class="price"></p>
           <p class="content"></p>
         </a>
-      </li>
+      </div>
     </template>
     <script src="js/index.js"></script>
     <script src="js/common.js"></script>

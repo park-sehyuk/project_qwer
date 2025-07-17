@@ -1,437 +1,325 @@
 <!DOCTYPE html>
 
 <html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
 
-<head>
+    <title>리스트 페이지</title>
 
-<meta charset="UTF-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
-<title>리스트 페이지</title>
+    <link rel="stylesheet" href="../css/base.css" />
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="../css/commen.css" />
 
-<link rel="stylesheet" href="../css/base.css" />
+    <link rel="stylesheet" href="../css/production/itemList.css" />
+  </head>
 
-<link rel="stylesheet" href="../css/commen.css" />
+  <body>
+    <div id="header">
+      <header>
+        <div id="header-top">
+          <h1 class="title"><a href="">QWER</a></h1>
+        </div>
 
-<link rel="stylesheet" href="../css/production/itemList.css" />
+        <div id="header-mid">
+          <div class="midLeft">
+            <ul id="category">
+              <li><a href="">New</a></li>
 
-</head>
+              <li><a href="">Best</a></li>
 
-<body>
+              <li>
+                <a href="">Men</a>
 
-<div id="header">
+                <ul class="subMenuTitle">
+                  <li>
+                    <a href="">상의</a>
 
-<header>
+                    <ul class="sub-menu">
+                      <li><a href="">반팔</a></li>
 
-<div id="header-top">
+                      <li><a href="">긴팔</a></li>
 
-<h1 class="title"><a href="">QWER</a></h1>
+                      <li><a href="">맨투맨</a></li>
 
-</div>
+                      <li><a href="">니트</a></li>
 
-<div id="header-mid">
+                      <li><a href="">아우터</a></li>
+                    </ul>
+                  </li>
 
-<div class="midLeft">
+                  <li>
+                    <a href="">하의</a>
 
-<ul id="category">
+                    <ul class="sub-menu">
+                      <li><a href="">반바지</a></li>
 
-<li><a href="">New</a></li>
+                      <li><a href="">슬랙스</a></li>
 
-<li><a href="">Best</a></li>
+                      <li><a href="">청바지</a></li>
 
-<li>
+                      <li><a href="">면바지</a></li>
 
-<a href="">Men</a>
+                      <li><a href="">트랙팬츠</a></li>
+                    </ul>
+                  </li>
 
-<ul class="subMenuTitle">
+                  <li>
+                    <a href="">신발</a>
 
-<li>
+                    <ul class="sub-menu">
+                      <li><a href="">러닝화</a></li>
 
-<a href="">상의</a>
+                      <li><a href="">스니커즈</a></li>
 
-<ul class="sub-menu">
+                      <li><a href="">구두</a></li>
 
-<li><a href="">반팔</a></li>
+                      <li><a href="">샌들</a></li>
 
-<li><a href="">긴팔</a></li>
+                      <li><a href="">슬리퍼</a></li>
+                    </ul>
+                  </li>
 
-<li><a href="">맨투맨</a></li>
+                  <li>
+                    <a href="">그 외</a>
 
-<li><a href="">니트</a></li>
+                    <ul class="sub-menu">
+                      <li><a href="">양말</a></li>
 
-<li><a href="">아우터</a></li>
+                      <li><a href="">가방</a></li>
 
-</ul>
+                      <li><a href="">악세사리</a></li>
 
-</li>
+                      <li><a href="">모자</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
 
-<li>
+              <li>
+                <a href="">Women</a>
 
-<a href="">하의</a>
+                <ul class="subMenuTitle">
+                  <li>
+                    <a href="">상의</a>
 
-<ul class="sub-menu">
+                    <ul class="sub-menu">
+                      <li><a href="">반팔</a></li>
 
-<li><a href="">반바지</a></li>
+                      <li><a href="">긴팔</a></li>
 
-<li><a href="">슬랙스</a></li>
+                      <li><a href="">맨투맨</a></li>
 
-<li><a href="">청바지</a></li>
+                      <li><a href="">니트</a></li>
 
-<li><a href="">면바지</a></li>
+                      <li><a href="">아우터</a></li>
+                    </ul>
+                  </li>
 
-<li><a href="">트랙팬츠</a></li>
+                  <li>
+                    <a href="">하의</a>
 
-</ul>
+                    <ul class="sub-menu">
+                      <li><a href="">반바지</a></li>
 
-</li>
+                      <li><a href="">슬랙스</a></li>
 
-<li>
+                      <li><a href="">청바지</a></li>
 
-<a href="">신발</a>
+                      <li><a href="">면바지</a></li>
 
-<ul class="sub-menu">
+                      <li><a href="">트랙팬츠</a></li>
+                    </ul>
+                  </li>
 
-<li><a href="">러닝화</a></li>
+                  <li>
+                    <a href="">신발</a>
 
-<li><a href="">스니커즈</a></li>
+                    <ul class="sub-menu">
+                      <li><a href="">러닝화</a></li>
 
-<li><a href="">구두</a></li>
+                      <li><a href="">스니커즈</a></li>
 
-<li><a href="">샌들</a></li>
+                      <li><a href="">구두</a></li>
 
-<li><a href="">슬리퍼</a></li>
+                      <li><a href="">샌들</a></li>
 
-</ul>
+                      <li><a href="">슬리퍼</a></li>
+                    </ul>
+                  </li>
 
-</li>
+                  <li>
+                    <a href="">그 외</a>
 
-<li>
+                    <ul class="sub-menu">
+                      <li><a href="">양말</a></li>
 
-<a href="">그 외</a>
+                      <li><a href="">가방</a></li>
 
-<ul class="sub-menu">
+                      <li><a href="">악세사리</a></li>
 
-<li><a href="">양말</a></li>
+                      <li><a href="">모자</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
 
-<li><a href="">가방</a></li>
+              <li>
+                <a href="">Kids</a>
 
-<li><a href="">악세사리</a></li>
+                <ul class="subMenuTitle">
+                  <li>
+                    <a href="">상의</a>
 
-<li><a href="">모자</a></li>
+                    <ul class="sub-menu">
+                      <li><a href="">반팔</a></li>
 
-</ul>
+                      <li><a href="">긴팔</a></li>
 
-</li>
+                      <li><a href="">맨투맨</a></li>
 
-</ul>
+                      <li><a href="">니트</a></li>
 
-</li>
+                      <li><a href="">아우터</a></li>
+                    </ul>
+                  </li>
 
-<li>
+                  <li>
+                    <a href="">하의</a>
 
-<a href="">Women</a>
+                    <ul class="sub-menu">
+                      <li><a href="">반바지</a></li>
 
-<ul class="subMenuTitle">
+                      <li><a href="">슬랙스</a></li>
 
-<li>
+                      <li><a href="">청바지</a></li>
 
-<a href="">상의</a>
+                      <li><a href="">면바지</a></li>
 
-<ul class="sub-menu">
+                      <li><a href="">트랙팬츠</a></li>
+                    </ul>
+                  </li>
 
-<li><a href="">반팔</a></li>
+                  <li>
+                    <a href="">신발</a>
 
-<li><a href="">긴팔</a></li>
+                    <ul class="sub-menu">
+                      <li><a href="">러닝화</a></li>
 
-<li><a href="">맨투맨</a></li>
+                      <li><a href="">스니커즈</a></li>
 
-<li><a href="">니트</a></li>
+                      <li><a href="">샌들</a></li>
 
-<li><a href="">아우터</a></li>
+                      <li><a href="">슬리퍼</a></li>
+                    </ul>
+                  </li>
 
-</ul>
+                  <li>
+                    <a href="">그 외</a>
 
-</li>
+                    <ul class="sub-menu">
+                      <li><a href="">양말</a></li>
 
-<li>
+                      <li><a href="">가방</a></li>
 
-<a href="">하의</a>
+                      <li><a href="">악세사리</a></li>
 
-<ul class="sub-menu">
+                      <li><a href="">모자</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
 
-<li><a href="">반바지</a></li>
+              <li><a href="">Sale</a></li>
+            </ul>
+          </div>
 
-<li><a href="">슬랙스</a></li>
+          <div class="midRight">
+            <ul id="icons">
+              <li class="login"><a href="userLog/login.html">로그인</a></li>
 
-<li><a href="">청바지</a></li>
+              <li class="signUp">
+                <a href="userLog/signUp.html">회원가입</a>
+              </li>
 
-<li><a href="">면바지</a></li>
+              <li class="cart">
+                <a href="">장바구니<span>0</span></a>
+              </li>
+            </ul>
 
-<li><a href="">트랙팬츠</a></li>
+            <button id="searchBtn">검색</button>
+          </div>
+        </div>
 
-</ul>
+        <div id="searchResult">
+          <div id="srTop">
+            <div id="searchDiv">
+              <p><button id="srBtn">돋보기</button></p>
 
-</li>
+              <input type="text" name="search" id="search" />
 
-<li>
+              <button id="clear">지우기</button>
+            </div>
+          </div>
 
-<a href="">신발</a>
+          <div id="srMid">
+            <p>인기 검색어</p>
 
-<ul class="sub-menu">
+            <ul>
+              <li><button>상품1</button></li>
 
-<li><a href="">러닝화</a></li>
+              <li><button>상품12</button></li>
 
-<li><a href="">스니커즈</a></li>
+              <li><button>상품123</button></li>
 
-<li><a href="">구두</a></li>
+              <li><button>상품1234</button></li>
 
-<li><a href="">샌들</a></li>
+              <li><button>상품12345</button></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+    </div>
 
-<li><a href="">슬리퍼</a></li>
+    <div class="container">
+      <div class="main-banner">
+        <img src="../img/itemlistmain.jpg" alt="Main Banner Image" />
+      </div>
 
-</ul>
+      <div class="filter-bar">
+        <div class="item-count">
+          <span id="total-items">0 Item</span>
+        </div>
 
-</li>
+        <div class="sort-container">
+          <button class="sort-button">
+            <span id="sort-text">정렬 기준</span>
 
-<li>
+            <span class="arrow">▼</span>
+          </button>
 
-<a href="">그 외</a>
+          <div class="sort-dropdown">
+            <a href="#" data-sort="popular">인기순</a>
 
-<ul class="sub-menu">
+            <a href="#" data-sort="price_desc">높은가격순</a>
 
-<li><a href="">양말</a></li>
+            <a href="#" data-sort="price_asc">낮은가격순</a>
+          </div>
+        </div>
+      </div>
 
-<li><a href="">가방</a></li>
+      <main id="product-grid" class="product-grid"></main>
 
-<li><a href="">악세사리</a></li>
+      <nav class="pagination-container">
+        <ul id="pagination" class="pagination"></ul>
+      </nav>
+    </div>
 
-<li><a href="">모자</a></li>
+    <div id="footer"></div>
 
-</ul>
+    <script src="../js/production/itemLIst.js"></script>
 
-</li>
-
-</ul>
-
-</li>
-
-<li>
-
-<a href="">Kids</a>
-
-<ul class="subMenuTitle">
-
-<li>
-
-<a href="">상의</a>
-
-<ul class="sub-menu">
-
-<li><a href="">반팔</a></li>
-
-<li><a href="">긴팔</a></li>
-
-<li><a href="">맨투맨</a></li>
-
-<li><a href="">니트</a></li>
-
-<li><a href="">아우터</a></li>
-
-</ul>
-
-</li>
-
-<li>
-
-<a href="">하의</a>
-
-<ul class="sub-menu">
-
-<li><a href="">반바지</a></li>
-
-<li><a href="">슬랙스</a></li>
-
-<li><a href="">청바지</a></li>
-
-<li><a href="">면바지</a></li>
-
-<li><a href="">트랙팬츠</a></li>
-
-</ul>
-
-</li>
-
-<li>
-
-<a href="">신발</a>
-
-<ul class="sub-menu">
-
-<li><a href="">러닝화</a></li>
-
-<li><a href="">스니커즈</a></li>
-
-<li><a href="">샌들</a></li>
-
-<li><a href="">슬리퍼</a></li>
-
-</ul>
-
-</li>
-
-<li>
-
-<a href="">그 외</a>
-
-<ul class="sub-menu">
-
-<li><a href="">양말</a></li>
-
-<li><a href="">가방</a></li>
-
-<li><a href="">악세사리</a></li>
-
-<li><a href="">모자</a></li>
-
-</ul>
-
-</li>
-
-</ul>
-
-</li>
-
-<li><a href="">Sale</a></li>
-
-</ul>
-
-</div>
-
-<div class="midRight">
-
-<ul id="icons">
-
-<li class="login"><a href="userLog/login.html">로그인</a></li>
-
-<li class="signUp">
-
-<a href="userLog/signUp.html">회원가입</a>
-
-</li>
-
-<li class="cart">
-
-<a href="">장바구니<span>0</span></a>
-
-</li>
-
-</ul>
-
-<button id="searchBtn">검색</button>
-
-</div>
-
-</div>
-
-<div id="searchResult">
-
-<div id="srTop">
-
-<div id="searchDiv">
-
-<p><button id="srBtn">돋보기</button></p>
-
-<input type="text" name="search" id="search" />
-
-<button id="clear">지우기</button>
-
-</div>
-
-</div>
-
-<div id="srMid">
-
-<p>인기 검색어</p>
-
-<ul>
-
-<li><button>상품1</button></li>
-
-<li><button>상품12</button></li>
-
-<li><button>상품123</button></li>
-
-<li><button>상품1234</button></li>
-
-<li><button>상품12345</button></li>
-
-</ul>
-
-</div>
-
-</div>
-
-</header>
-
-</div>
-
-<div class="container">
-
-<div class="main-banner">
-
-<img src="../img/itemlistmain.jpg" alt="Main Banner Image" />
-
-</div>
-
-<div class="filter-bar">
-
-<div class="item-count">
-
-<span id="total-items">0 Item</span>
-
-</div>
-
-<div class="sort-container">
-
-<button class="sort-button">
-
-<span id="sort-text">정렬 기준</span>
-
-<span class="arrow">▼</span>
-
-</button>
-
-<div class="sort-dropdown">
-
-<a href="#" data-sort="popular">인기순</a>
-
-<a href="#" data-sort="price_desc">높은가격순</a>
-
-<a href="#" data-sort="price_asc">낮은가격순</a>
-
-</div>
-
-</div>
-
-</div>
-
-<main id="product-grid" class="product-grid"></main>
-
-<nav class="pagination-container">
-
-<ul id="pagination" class="pagination"></ul>
-
-</nav>
-
-</div>
-
-<div id="footer"></div>
-
-<script src="../js/production/itemLIst.js"></script>
-
-<script src="../js/common.js"></script>
-
-</body>
-
+    <script src="../js/common.js"></script>
+  </body>
 </html>
