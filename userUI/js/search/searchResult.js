@@ -1,4 +1,3 @@
-
 let itemLists = [];
 
 function loadItems() {
@@ -308,4 +307,3 @@ function setupEventListeners() {
 
 setupEventListeners();
 render();
-
