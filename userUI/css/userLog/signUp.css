@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 .form-container {
-  margin: 0;
+  margin: 30px auto;
   background-color: #f0f2f5;
   display: flex;
   justify-content: center;

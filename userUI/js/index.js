@@ -17,7 +17,7 @@ let bestItemList = [{
     src : 'img/shirtsweater1.PNG',
     title : '텍스처 코튼 리넨 셔츠 스웨터',
     price : '369000',
-    content : '랄프로렌'
+    content : '랄프로렌'
 },{
     id : 3,
     src : 'img/tshirt1.PNG',
