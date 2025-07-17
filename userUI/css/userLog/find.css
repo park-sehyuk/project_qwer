@@ -1,6 +1,5 @@
 @charset "utf-8";
 
-
 .container {
   display: flex;
   justify-content: center;
@@ -13,7 +12,7 @@
   width: 100%;
   max-width: 500px;
   overflow: hidden;
-
+}
 
 .tabs {
   display: flex;
