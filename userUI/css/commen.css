@@ -15,7 +15,7 @@ a {
   width: 1440px;
   height: auto;
 }
-header {
+#header {
   position: relative;
   width: 100%;
   color: black;
@@ -147,6 +147,7 @@ footer .fMenu ul li:not(:last-child)::after {
 }
 
 #searchResult #srTop div {
+  position: relative;
   display: flex;
   margin: 0 auto;
 }
@@ -159,8 +160,8 @@ footer .fMenu ul li:not(:last-child)::after {
 }
 #srTop p button {
   position: absolute;
-  top: 23px;
-  left: 296px;
+  top: 3px;
+  left: 10px;
   display: block;
   width: 31px;
   height: 31px;
@@ -175,7 +176,7 @@ footer .fMenu ul li:not(:last-child)::after {
 }
 #srTop div #clear {
   position: absolute;
-  right: 293px;
+  right: 15px;
   width: 36px;
   height: 36px;
   background-repeat: no-repeat;
