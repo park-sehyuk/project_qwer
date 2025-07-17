@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-body {
+.login-container {
   margin: 0;
   background-color: #f0f2f5;
   display: flex;
@@ -8,9 +8,6 @@ body {
   align-items: center;
   min-height: 100vh;
   color: #333;
-}
-
-.login-container {
   width: 100%;
   max-width: 520px;
   padding: 20px;
@@ -70,8 +67,8 @@ label {
   margin-bottom: 8px;
 }
 
-input[type='text'],
-input[type='password'] {
+input[type="text"],
+input[type="password"] {
   width: 100%;
   padding: 10px 0;
   border: none;
@@ -81,8 +78,8 @@ input[type='password'] {
   transition: border-color 0.3s;
 }
 
-input[type='text']:focus,
-input[type='password']:focus {
+input[type="text"]:focus,
+input[type="password"]:focus {
   border-bottom-color: #000;
 }
 
@@ -152,8 +149,8 @@ input[type='password']:focus {
 .password-input-wrapper {
   position: relative;
 }
-.password-input-wrapper input[type='password'],
-.password-input-wrapper input[type='text'] {
+.password-input-wrapper input[type="password"],
+.password-input-wrapper input[type="text"] {
   padding-right: 40px;
 }
 

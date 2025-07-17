@@ -4,69 +4,23 @@
 <head>
   <meta charset="UTF-8">
   <title>detail page</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <link rel="stylesheet" href="../css/base.css">
   <link rel="stylesheet" href="../css/commen.css">
   <link rel="stylesheet" href="../css/production/detail.css">
 </head>
 
 <body>
-  <header>
-    <div id="header-top">
-      <h1 class="title"><a href="">QWER</a></h1>
-    </div>
-    <div id="header-mid">
-      <div class="midLeft">
-        <ul id="category">
-          <li><a href="">New</a></li>
-          <li><a href="">Best</a></li>
-          <li><a href="">Men</a></li>
-          <li><a href="">Women</a></li>
-          <li><a href="">Kids</a></li>
-          <li><a href="">Sale</a></li>
-        </ul>
-      </div>
-      <div class="midRight">
-        <ul id="icons">
-          <li class="login"><a href="">로그인</a></li>
-          <li class="signUp"><a href="">회원가입</a></li>
-          <li class="cart">
-            <a href="">장바구니<span>0</span></a>
-          </li>
-        </ul>
-        <button id="search">검색</button>
-      </div>
-    </div>
-    <div id="searchResult">
-      <div id="srTop">
-        <div id="searchDiv">
-          <p><button>돋보기</button></p>
-          <input type="text" name="search" id="search" />
-          <button id="clear">지우기</button>
-        </div>
-        <p>
-          <button>취소</button>
-        </p>
-      </div>
-      <div id="srMid">
-        <p>인기 검색어</p>
-        <ul>
-          <li><button>상품1</button></li>
-          <li><button>상품2</button></li>
-          <li><button>상품3</button></li>
-          <li><button>상품4</button></li>
-          <li><button>상품5</button></li>
-        </ul>
-      </div>
-    </div>
-  </header>
+  <header id="header"></header>
   <div id="big-Title">
+    
     <div class="top-Side">
-      <div class="left-image"></div>
+      <div class="left-image" id="main-product-image"></div>
       <div class="right-Side">
         <p class="text-Title">즉시 구매가</p>
-        <p class="price">80,000원</p>
-        <p class="brand-name">Stussy World Tour T-Shirt Black 2024,2025</p>
-        <p class="brand-hagul">스투시 월드투어 티셔츠 블랙 2024,2025</p>
+        <p class="price" id="product-price">80,000원</p>
+        <p class="brand-name" id="product-name-english">Stussy World Tour T-Shirt Black 2024,2025</p>
+        <p class="brand-hagul" id="product-name-korean">스투시 월드투어 티셔츠 블랙 2024,2025</p>
         <div class="Rating">
           <p class="icon"></p>
           <p class="number">4.8</p>
@@ -86,7 +40,7 @@
           </ul>
         </div>
         <p class="color-text">색상</p>
-        <div class="color">
+        <div class="color" id="product-colors">
           <button class="red"><a href=""></a></button>
           <button class="blue"><a href=""></a></button>
           <button class="Black"><a href=""></a></button>
@@ -97,20 +51,6 @@
         </div>
         <div class="cloth-container">
           <div class="cloth">
-            <img src="../img/cloth.jpg" alt="옷 이미지 1">
-            <img src="../img/cloth2.jpg" alt="옷 이미지 2">
-            <img src="../img/cloth3.png" alt="옷 이미지 3">
-            <img src="../img/cloth4.jpg" alt="옷 이미지 4">
-            <img src="../img/cloth5.jpg" alt="옷 이미지 5">
-            <img src="../img/cloth6.jpg" alt="옷 이미지 6">
-            <img src="../img/cloth7.jpg" alt="옷 이미지 7">
-            <img src="../img/cloth8.jpg" alt="옷 이미지 8">
-            <img src="../img/cloth9.jpg" alt="옷 이미지 9">
-            <img src="../img/cloth10.jpg" alt="옷 이미지 10">
-            <img src="../img/cloth11.jpg" alt="옷 이미지 11">
-            <img src="../img/cloth12.jpg" alt="옷 이미지 12">
-            <img src="../img/cloth13.jpg" alt="옷 이미지 13">
-            <img src="../img/cloth14.jpg" alt="옷 이미지 14">
           </div>
         </div>
         <div class="scroll">
@@ -125,76 +65,27 @@
     </div>
   </div>
   <div class="bottom-Side">
-    <div class="bottom-image-container">
-      <img src="/userUI/img/상품 이미지 후보 1.jpg" alt="추가정보 이미지1">
-      <img src="/userUI/img/상품 이미지 후보 2.jpg" alt="추가정보 이미지2">
-      <img src="/userUI/img/상품 이미지 후보 3.jpg" alt="추가정보 이미지3">
-      <img src="/userUI/img/상품 이미지 후보 7.jpg" alt="추가정보 이미지4">
+    <div class="bottom-image-container" id="bottom-image-dynamic-container">
     </div>
     <ul class="bottom-Sidetext">
       <p class="impor">추가 정보</p>
-      <li>상품정보제공고시</li>
-      <li>제조연월: 수입제품으로 각 제품별 입고 시기에 따라 상이하여 정확한 제조연월 제공이 <br> 어렵습니다.<br>제조연월을 확인하시려면 고객센터에 문의하시기 바라며,<br>정확한 제조연월은
+      <li id="product-info-notice">상품정보제공고시</li>
+      <li id="product-info-detail"></li><li>제조연월: 수입제품으로 각 제품별 입고 시기에 따라 상이하여 정확한 제조연월 제공이 <br> 어렵습니다.<br>제조연월을 확인하시려면 고객센터에 문의하시기 바라며,<br>정확한 제조연월은
         배송받으신 제품의 라벨을 참고하시기 바랍니다.</li>
-      <li>A/S 책임자와 전화번호: (유)나이키코리아 온라인 스토어 고객센터 / 080-022-0182</li>
+      <li>A/S 책임자와 전화번호: (유)QWER코리아 온라인 스토어 고객센터 / 080-022-0182</li>
       <li>세탁방법 및 취급시 주의사항: 자세한 내용은 '자세히 보기'를 클릭하여 확인 부탁드립니다.</li>
       <li>미성년자 권리 보호 안내: 자세한 내용은 '자세히 보기' 를 클릭하여 확인 부탁드립니다.</li>
       <li>품질보증기준: 품질보증기간-섬유 및 일반 소재(구입 후 6개월), 가죽소재(구입 후 1년).<br>유통 중 손상되었거나 품질에 이상이 있는 제품에 한하여 소비자 피해 보상 규정에 의거 <br>
         보상하여 드립니다.<br>단, 제품에 부착되어 있는 사용방법 및 취급 시 주의사항에 따라 제품을 관리해 주시고,<br>소비자 부주의로 인한 품질 이상 및 변형에 대해서는 책임을 지지 않습니다.
       </li>
-      <li>제조자/수입품의 경우 수입자를 함께 표기: Nike. Inc / (유)나이키코리아</li>
+      <li>제조자/수입품의 경우 수입자를 함께 표기: Nike. Inc / (유)QWER</li>
     </ul>
-  </div>
-
-  </div>
-  <footer id="footer">
-    <div class="fMenu">
-      <ul>
-        <li><a href="">회사소개</a></li>
-        <li><a href="">이용약관</a></li>
-        <li>
-          <a href=""><strong>개인정보처리방침</strong></a>
-        </li>
-        <li><a href="">상품교환안내</a></li>
-        <li><a href="">가맹안내</a></li>
-      </ul>
     </div>
-    <div class="fInfo">
-      <div class="fLeft">
-        <span class="point"><strong>QWER 본사 대표전화 1234-5678</strong></span>
-        <br />
-        <span>OPEN : AM 10:00 ~ PM 17:00</span>
-        <span>LUNCH : PM 12:00 ~ PM 13:00</span>
-        <span>SAT/HOLIDAY OFF</span>
-        <br />
-        <span>제휴 문의 및 기타 사항은<br />
-          대표전화로 전화주시기 바랍니다.<br />
-          대표전화 : 1234-5678
-        </span>
-      </div>
-      <div class="fMid">
-        <span class="point"><strong>COMPANY INFO</strong></span>
-        <br />
-        <span>상호(법인명) : QWER</span>
-        <span>대표자(성명) : 박세혁</span>
-        <span>사업자등록번호 : 123-45-67890 </span>
-        <span>통신판매업 신고</span>
-        <span><a href="">[사업자 정보확인]</a></span>
-        <span>개인정보보호책임자 : 박세혁</span>
-        <span>호스팅제공자 : 박세혁</span><br />
-        <span>QWER 제품과 관련된 모든 디자인, 이미지, 문구, 콘텐츠 등에 대한
-          저작권은 QWER에 있으며,<br />
-          허가 없이 무단 사용, 복제, 도용 시 저작권법에 의거하여 민/형사상의
-          처벌을 받을 수 있습니다.<br />
-          QWER는 의료기사 등에 관한 법률에 따라 온라인 판매가 이루어지지
-          않습니다.</span>
-      </div>
-      <div class="fRight">
-        <span class="point">Copyright© <strong>QWER</strong>. All rights reserved.</span>
-      </div>
-    </div>
-  </footer>
+    
+  </div>
+  <footer id="footer"></footer>
   <script src="/userUI/js/production/detail.js"></script>
+  <script src="../js/common.js"></script>
 </body>
 
 </html>
